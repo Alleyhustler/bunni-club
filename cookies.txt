@@ -1,0 +1,14 @@
+# HTTrack Website Copier Cookie File
+# This file format is compatible with Netscape cookies
+web.archive.org	TRUE	/	FALSE	1999999999	SERVER	wwwb-app226
+gist.github.com	TRUE	/	FALSE	1999999999	_gh_sess	HXvmDxN2aW%2BMW9x4DECd%2F9x3RIvvksduNi4gIz%2FwAbEtWIOQo788rOShHOQrWbXhwQNdC3VIBC%2FtfdDKdA85dSR0uuGpgBGWrHkXs25wGuNGuh3MYKwbIkgW9%2BW7bJUOAfv6TSLEluHaQ1QxoIwJCR6QOIxjifjCJ6kC2yKZ5JW8VFPv%2Fglumtpue3UBQl4hzcOg3csLF14c1IWAVR%2FlmPY5lJlthbbNIk%2BRg5VyNgVc08xve2QYUSxhoxE2ZX3ZBhvrNwq452%2FdrQZ1zNaJXQ%3D%3D--0BqNO%2Fvg46vp4L8R--FqGrZcZyWL0YgRs3ZIKWIA%3D%3D
+github.com	TRUE	/	FALSE	1999999999	_octo	GH1.1.1425170251.1748278329
+github.com	TRUE	/	FALSE	1999999999	logged_in	no
+gist.github.com	TRUE	/	FALSE	1999999999	SameSite	Lax
+dropboxusercontent.com	TRUE	/	FALSE	1999999999	uc_session	76EXhpgWiYd4U2DYWRxwZbdJbgOU3MrqYHQZ9OzQgZmAIc9iXjbQHFN0AjqGUubu
+dl.dropboxusercontent.com	TRUE	/	FALSE	1999999999	SameSite	None
+github.com	TRUE	/	FALSE	1999999999	_gh_sess	A2SiNu%2FIXYAViXSe5CfO%2BJDbVB%2Bc%2BwvgSqdK9KarDo8PbYubdoJir%2BU0ZCFOev6eRlRrFjTFDb5YM8hmb2cAqNN0wfOfcCHlcsGxVJjCreqUMun1kA6y54Hg5p9onR2Ju%2BGi69GCfgCmEFTM7tln55xybV%2FnEoMnLhgK6EI%2F87cZq3OQliUcqjzyuXrAKJHopwyeON%2B97XIAlKEgcT95dxydrVQ%2BZdL7n3dl5r59UClebHfoYvLIyDDGkCJpqV65aAYSTTRtdbqx%2BXHGY7Cvsw%3D%3D--cd5dOvbxY4l%2FZVzO--%2FIdspYREqazjiHjJLIA9hg%3D%3D
+github.com	TRUE	/	FALSE	1999999999	SameSite	Lax
+.codepen.io	TRUE	/	FALSE	1999999999	__cf_bm	gUMzAkmIklPyl56wOgxG5eC0w_rqjtNw1_y7suqFAGg-1748278482-1.0.1.1-H1nldIFgezko0_BEVGu7GO3V9EmLRSo39khhiSeBibsOjNyryz_uoT8AOu870RYIPzdNykuSVPDm2aCazqrcHCn7GAra2KwBxtHXbKl3ib0
+cpwebassets.codepen.io	TRUE	/	FALSE	1999999999	SameSite	None
+

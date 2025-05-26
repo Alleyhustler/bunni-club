@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    
+    <title>Reusable HTML Snippets: Web Components</title>
+    
+<!-- Mirrored from nenrikido.neocities.org/blog/post/web-components/ by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 26 May 2025 16:55:14 GMT -->
+<meta charset="utf-8">
+    <meta name="description"
+        content="A special world." />
+    <meta name="dc.relation" content="../../../index.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel='icon' type='image/x-icon' href='../../../images/icons/pink-favicon.svg' /> 
+
+    
+    <link href="../../../css/main.min.e82017acf1d47837e34aeae7160cbd8cee87ccf07777ebc9e2e85745f526f166.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="../../../../cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"> 
+    <script defer src="../../../../cloud.umami.is/script.js" data-website-id="fab6651d-7739-4c92-8ab8-01b6b670711b"></script>
+    
+    <div id="preloader"></div><body>
+<div class="wrapper">
+    <nav id="navAlt">
+        <div class="navWrapper"> <a class="navLink" href="../../index.html">
+                <div id="blog"> </div>Blog
+            </a>
+            <p><i class="fa-regular fa-circle-down"></i></p>
+            <p><i class="fa-solid fa-hashtag"></i> <a href="#"> Reusable HTML Snippets: Web Components </a></p>
+            <p><i class="fa-solid fa-hashtag"></i> <a href="#comments"> Comments </a></p>
+        </div><div class="arrows">
+      
+            
+                <a href="../../index.html"><i class="fas fa-home"> 
+                </i></a>
+            
+            
+            <a href="../site-overhaul/index.html"> <i class="fas fa-long-arrow-alt-right"> </i></a>
+            
+        </div>
+
+        <div id='musicplayer'>
+            <div id='musicpixel'> <img src="../../../images/pixels/music.gif" style="max-width: 40px;">
+                <div class='overlay'>
+                    <div class='playpause'><i class="fas fa-play"></i></div>
+                </div>
+            </div>
+            <div id='musictitle'> <span class='marquee'>wind chimes</span> </div>
+        </div> <audio id='musicsrc' loop src='https://dl.dropbox.com/scl/fi/207sozz1oxbnjuldcx9up/wind-chimes.mp3?rlkey=g80h8r4oygb24yl6r5ygayi9f&amp;dl=0'></audio>
+
+
+<script>
+    document.querySelector('.playpause').addEventListener('click', playpause);
+    
+    function playpause() {
+      if (document.querySelector('.playpause').innerHTML == '<i class="fas fa-play"></i>') {
+        document.querySelector('#musicsrc').play();
+        document.querySelector('.playpause').innerHTML = '<i class="fas fa-pause"></i>';
+      } else {
+        document.querySelector('#musicsrc').pause();
+        document.querySelector('.playpause').innerHTML = '<i class="fas fa-play"></i>';
+      }
+    }
+</script>
+<form class="search"> <input type="text" class="searchTerm" placeholder="Search..."> <button aria-label="submit" type="submit" class="searchButton"> <i class="fa fa-search"></i> </button> </form>
+
+<ul class="searchResults"></ul></nav>
+
+    <main>
+        <article>
+            <div class="grid">
+                <div class="item large">
+                    <div class="cards"><div class="cardsHeader">
+    <div class="cardsControls">
+            <div> <i class="fa-solid fa-arrows-up-down-left-right"></i></div>
+            <div> <i class="fa-solid fa-window-minimize"></i> <i class="fa-regular fa-window-restore"></i> <i class="fa-solid fa-xmark"></i></div>
+    </div>
+</div><div class="cardsBody">
+                            <h2>Reusable HTML Snippets: Web Components</h2>
+                            <blockquote>March 28, 2023</blockquote> <p>first off, here&rsquo;s the demo:</p>
+<p><p class="codepen" data-height="413" data-default-tab="html,result" data-slug-hash="OJoopqa" data-user="kujara1" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"> <span>See the Pen <a href="https://codepen.io/kujara1/pen/OJoopqa"> web components card demo</a> by jay (<a href="https://codepen.io/kujara1">@kujara1</a>) on <a href="https://codepen.io/">CodePen</a>.</span> </p></p><script async src="../../../../public.codepenassets.com/embed/index.js"></script>
+<h4 id="my-coding-backstory-sad-violin">my coding backstory (sad violin)</h4>
+<p>the first time i made a Real Website (cicada), i had never heard of <a href="https://docs.getdbt.com/terms/dry">DRY code</a>. DRY stands for &ldquo;don&rsquo;t repeat yourself,&rdquo; and it&rsquo;s often cited as one of the most important guiding principles for both backend and frontend coding. it <a href="https://dev.to/wuz/stop-trying-to-be-so-dry-instead-write-everything-twice-wet-5g33">isn&rsquo;t a hard rule</a>, but the consensus tends to be that if you repeat the same code more than three times, you may want to consider making it repeatable.</p>
+<p>but i didn&rsquo;t know this back then. my experience was limited to single pages and tumblr themes, so i&rsquo;d never thought about page management before. at first, it wasn&rsquo;t so bad. copying and pasting the stylesheets, scripts, header, footer—it&rsquo;s manageable for your core pages. but we were running a litmag, and this meant publishing issues that were usually at least 30 pages, and sometimes hit over 50.</p>
+<p>i dreaded the task every semester. it was a time consuming and tedious nightmare that no one wanted to help me with (for obvious reasons.) invariably, i&rsquo;d mess up the copy and pasting at some point, and then multiple pages would have mistakes. i had to explain to our managing editor that it&rsquo;d take days to change any navigation links because i&rsquo;d have to manually update every single page. he just stared at me.</p>
+<p>i knew this was Wrong, but i kept telling myself that this wasn&rsquo;t my real job, so i had no reason to learn a better way—i was a graphic design major, not a computer scientist! this was just my flimsy bandaid solution until a proper web developer finally applied and saved the day!</p>
+<p>that never happened. CCM has existed since 2018, and we have never had one single person apply to be web developer. it has always just been me, tearfully wondering if that numb feeling in my wrist was of concern as i tried to copy and paste dozens of pages worth of identical content. things came to a head when i discovered that i&rsquo;d been paying money for a dynamic site host when i could have been hosting it for free. embarrassing! harrowing! exhausting!</p>
+<p>i felt defeated. there was so much i didn&rsquo;t know and i was at a loss of where to even begin. i knew so little that i didn&rsquo;t even know the right search terms to input. there is so much information floating out there that it&rsquo;s overwhelming. i considered giving up.</p>
+<p>instead, i took the site down for 6 months and learned.</p>
+<h4 id="static-site-generators">static site generators</h4>
+<p>what i ultimately did was use a static site generator, which i highly recommend for anyone with a project that has as many pages as we did. i used hugo, and although i haven&rsquo;t tried out other static site generators, i am deeply in love with it to the point it now feels weird making stuff without it. the learning curve is intimidating, and it takes a lot of time to get comfortable with it, but you&rsquo;ll get there. i struggled a lot because i had to create a theme from scratch and the theme had a lot of interactive components that i didn&rsquo;t have enough skill to execute effectively, but the hugo community was super helpful and active. and if you&rsquo;re using pre-made themes, it&rsquo;s not hard to get started.</p>
+<p>hugo elegantly resolves the issue of repeatable code snippets through things like <a href="https://gohugo.io/templates/partials/">partials</a> and <a href="https://gohugo.io/content-management/shortcodes/">shortcodes</a>. static site generators in general were formulated with goals like this in mind. jekyll lets you use <a href="https://jekyllrb.com/docs/includes/">includes</a> and gatsby has <a href="https://www.gatsbyjs.com/docs/how-to/routing/layout-components/">layout components</a>.</p>
+<p>static site generators aim to make things very, very simple for you. they tend to prioritize markdown over HTML and encourage modularity in all design components. this is excellent for information, text-dense websites in particular.</p>
+<p>but maybe it&rsquo;s not so great for people who have small websites, for people who don&rsquo;t want to be bound by templates (even of their own creation), or maybe it&rsquo;s just more support than you need. and it certainly presents an additional challenge when deploying somewhere like neocities. so are there other solutions?</p>
+<h4 id="web-components">web components</h4>
+<p>i recognized a familiar feeling as i was working on this site. i was copying and pasting the card header, which is a bit dense due to how it&rsquo;s constructed (bootstrap columns + fontawesome icons). by the 20th card header across pages, i was officially twitchy. then, as i was copying and pasting my start menu, my brain started melting. i cannot go through this again, i decided. i&rsquo;d told myself it&rsquo;d be fine since it&rsquo;s only a few pages, but it&rsquo;s too late. i know the truth now. there&rsquo;s no good reason to repeat components that often.</p>
+<p>it made me realize i still fundamentally hadn&rsquo;t found a solution for repeatable HTML components. sure, static site generators can solve that issue for me, but how was i going to do with a service like neocities that was intentionally whittled down to the bare essentials?</p>
+<p>a lot of people on neocities seem to like iframes, but i don&rsquo;t think they&rsquo;re well-suited to this particular use-case. they&rsquo;re not simple code snippet injections, they&rsquo;re entire html files being injected into another html file. you have to style each individual iframe because it won&rsquo;t inherit the parent page&rsquo;s styling—which ends up undermining the goal of keeping your code DRY.</p>
+<p>cue&hellip;<a href="https://www.freecodecamp.org/news/reusable-html-components-how-to-reuse-a-header-and-footer-on-a-website/">web components</a>!! mdn docs cover web components <a href="https://developer.mozilla.org/en-US/docs/Web/Web_Components">here</a> as well. long story short, web components are a suite of tools you can utilize with vanilla javascript to create all sorts of repeatable code. i&rsquo;ve been told they funtion a lot like react.js components. here&rsquo;s a crash course video on web components and the accompanying <a href="https://codepen.io/bradtraversy/pen/wvaXKoK">codepen</a>.</p>
+<iframe class="yt" src="https://www.youtube.com/embed/PCWaFLy3VUo" title="Web Components Crash Course" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<p>as of writing this, i&rsquo;ve only needed to use custom elements, which are fairly simple to use:</p>
+<ul>
+<li>first, you create your reusable HTML snippet.</li>
+<li>then, you create a javascript file, decide on the name of your component, and build it. the syntax generally looks like this:</li>
+</ul>
+<pre> <code>
+class TITLE extends HTMLElement {
+    constructor() {
+    super();
+    this.innerHTML = `insert your HTML here`;
+     }
+       }
+  window.customElements.define('TITLE-ID', TITLE)
+</code></pre>  
+<ul>
+<li>from there, you can link the component and invoke the code in your HTML like <code>&lt;TITLE-ID&gt;&lt;/TITLE-ID&gt;</code></li>
+<li>note: your title-id must be two words combined with a hyphen. your title can be whatever you like though.</li>
+<li>note: remember to include the <code>`</code> tags when you insert your HTML.</li>
+</ul>
+<p>i currently use six components and they alone have saved me well over 1k lines of code. hopefully you find some utility in this post and can get started with repeatable snippets too. love &amp; peace on planet earth!</p>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="item large">
+                    <div class="cards"><div class="cardsHeader">
+    <div class="cardsControls">
+            <div> <i class="fa-solid fa-arrows-up-down-left-right"></i></div>
+            <div> <i class="fa-solid fa-window-minimize"></i> <i class="fa-regular fa-window-restore"></i> <i class="fa-solid fa-xmark"></i></div>
+    </div>
+</div><div class="cardsBody">
+                            <div id="comments">
+<div id="HCB_comment_box"><a href="http://www.htmlcommentbox.com/">Comment Form</a> is loading comments...</div>
+<link rel="stylesheet" type="text/css" href="../../../../www.htmlcommentbox.com/static/skins/bootstrap/twitter-bootstrapa4f0.css?v=0" />
+<script type="text/javascript" id="hcb">   if(!window.hcb_user){hcb_user={};} (function(){var s=document.createElement("script"), l=hcb_user.PAGE || (""+window.location).replace(/'/g,"%27"), h="https://www.htmlcommentbox.com/";s.setAttribute("type","text/javascript");s.setAttribute("src", h+"/jread?page="+encodeURIComponent(l).replace("+","%2B")+"&mod=%241%24wq1rdBcg%24wVz3xOOc.ZF1mLS1sR.Mp0"+"&opts=16782&num=10&ts=1680596795074");if (typeof s!="undefined") document.getElementsByTagName("head")[0].appendChild(s);})(); </script>
+</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </main>
+</div>
+<footer id="footer">
+    <ul>
+        <li> <button id="footer-button">START</button> </li>
+        <li> <a href="#" id="btn-back-to-top" onclick="call()"><i class="fa-solid fa-circle-chevron-up"></i></a></li>
+        <li>
+            <div id="clock" class="clock" onload="showTime()"></div>
+        </li>
+    </ul>
+</footer>
+
+<div id="start-menu" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h1>START MENU</h1> <span class="close">&times;</span>
+        </div>
+        <div class="modal-body">
+
+            <div class="modal-bio">
+                <img class="modal-bio img" src="../../../images/icons/ke.jpg">
+                <p style="font-size:large; font-weight:bold;">NENRIKIDO</p>
+                <p align="center"><i class="fa-regular fa-map"></i> <a href="../../../sitemap/index.html">Sitemap</a></p>
+
+                <ul style="font-style: italic;">
+                    <li>OS: Nenrikido</li>
+                    <li>Version: 1.75</li>
+                    <li>Host: Neocities</li>
+                    <li>Processor: Hugo</li>
+                    <li>Since: 03-13-23</li>
+                </ul>
+            </div>
+            <div class="modal-list">  <a class="modal-menu " href="../../../index.html">  <span>Home </span> <i class="fa-solid fa-chevron-right"></i></a>  <a class="modal-menu " href="../../../about/index.html">  <span>About </span> <i class="fa-solid fa-chevron-right"></i></a>  <a class="modal-menu " href="../../../gallery/index.html">  <span>Gallery </span> <i class="fa-solid fa-chevron-right"></i></a>  <a class="modal-menu " href="../../../commissions/index.html">  <span>Commissions </span> <i class="fa-solid fa-chevron-right"></i></a>  <a class="modal-menu " href="../../../code/index.html">  <span>Code </span> <i class="fa-solid fa-chevron-right"></i></a>  <a class="modal-menu " href="../../index.html">  <span>Blog </span> <i class="fa-solid fa-chevron-right"></i></a>  <a class="modal-menu " href="../../../links/index.html">  <span>Links </span> <i class="fa-solid fa-chevron-right"></i></a>  <a class="modal-menu " href="../../../microblog/index.html">  <span>Microblog </span> <i class="fa-solid fa-chevron-right"></i></a>  <a class="modal-menu " href="../../../library/index.html">  <span>Library </span> <i class="fa-solid fa-chevron-right"></i></a>  <a class="modal-menu " href="../../../nexus/index.html">  <span>Nexus </span> <i class="fa-solid fa-chevron-right"></i></a>  </div>
+
+        </div>
+        <div class="modal-footer"><div class="row centered">
+    <button id="pink" title="pink theme" class="theme-button" onclick="handleThemeButtonClick('pink', this)">💗</button>
+    <button id="blue" title="blue theme" class="theme-button" onclick="handleThemeButtonClick('blue', this)" >🫧</button> 
+    <button id="yellow" title="yellow theme" class="theme-button" onclick="handleThemeButtonClick('yellow', this)" >🪐</button> 
+    <button id="black" title="black theme" class="theme-button" onclick="handleThemeButtonClick('black', this)" >💤</button>
+    <button id="green" title="green theme" class="theme-button" onclick="handleThemeButtonClick('green', this)" >🌷</button>    
+</div></div>
+    </div>
+    <script>
+        function call() {
+            var body = $("html, body");
+            body.stop().animate({ scrollTop: 0 }, 500, 'swing', function () {
+            });
+        }</script>
+    <script type="text/javascript" src="../../../js/clock.js"></script>
+    <script defer type="text/javascript" src="../../../js/start.js"></script><script src="../../../js/theme.js" ></script>
+<script src="../../../../code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+<script src="../../../../cdn.jsdelivr.net/npm/muuri%400.9.5/dist/muuri.min.js"></script>
+<script defer src="../../../js/muuri-init.js"></script>
+<script src="../../../../cdn.jsdelivr.net/npm/%40twemoji/api%40latest/dist/twemoji.min.js" crossorigin="anonymous"></script>
+<script defer src="../../../js/lightbox.js" ></script>
+<script defer src="../../../js/yt_lite.js" ></script>
+<script defer src="../../../../unpkg.com/lunr%402.3.9/lunr.js"></script>
+<script defer src="../../../js/search.js" ></script>
+<script>
+  var loader = document.getElementById("preloader");
+  window.addEventListener("load", function () {
+    loader.style.display = "none";
+  });
+  var s = document.getElementById("preloader").style;
+  s.opacity = 1;
+  (function fade() {
+    (s.opacity -= 0.1) < 0 ? (s.display = "none") : setTimeout(fade, 40);
+  })();
+  </script>
+  <script>
+    twemoji.parse(document.body)
+  </script></body>
+
+
+<!-- Mirrored from nenrikido.neocities.org/blog/post/web-components/ by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 26 May 2025 16:55:14 GMT -->
+</html>

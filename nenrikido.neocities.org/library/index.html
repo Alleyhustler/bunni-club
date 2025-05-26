@@ -1,0 +1,1425 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    
+    <title>Library</title>
+    
+<!-- Mirrored from nenrikido.neocities.org/library/ by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 26 May 2025 16:53:46 GMT -->
+<meta charset="utf-8">
+    <meta name="description"
+        content="A special world." />
+    <meta name="dc.relation" content="../index.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel='icon' type='image/x-icon' href='../images/icons/pink-favicon.svg' /> 
+
+    
+    <link href="../css/main.min.e82017acf1d47837e34aeae7160cbd8cee87ccf07777ebc9e2e85745f526f166.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="../../cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"> 
+    <script defer src="../../cloud.umami.is/script.js" data-website-id="fab6651d-7739-4c92-8ab8-01b6b670711b"></script>
+    
+    <div id="preloader"></div><body>
+<style>
+
+.library-table-wrapper {
+      margin-top: 1rem;
+  }
+ .library-table {
+      width: 100%;
+      border-collapse: collapse;
+      table-layout: auto; 
+  }
+  .library-table th,
+  .library-table td {
+      padding: 10px;
+      text-align: left;
+      min-width: 100px;
+  }
+  .library-table th {
+      top: 0;
+      z-index: 1;
+  }
+
+  .library-item.selected {
+    background: var(--secondary_muted);
+  }
+
+.library-table-wrapper {
+      max-height: 38.5rem;
+      overflow-y: auto;
+  }
+  #preview-container {
+    border: 1px solid var(--secondary_muted);
+      margin-top: 1rem;
+      width: 100%;      
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+     
+  }
+  #preview-container iframe {   
+    height: 40rem;
+    width: 100%;
+      padding: 0;
+      border: none;
+  }
+  #checkout-link {
+      margin-top: 0.5rem;
+      padding: 1rem;
+      text-align: right;
+  }
+  .sort-indicator {
+      margin-left: 5px;
+      cursor: pointer;
+  }
+  </style>
+  
+  <div class="wrapper">
+    <nav id="navAlt">
+        <div class="navWrapper"> 
+            <a class="navLink" href="index.html">
+                <div id="library"></div>Library
+            </a>
+            <p><i class="fa-regular fa-circle-down"></i></p>
+            <p>Why don't you stay awhile?</p>
+        </div>
+        <div id='musicplayer'>
+            <div id='musicpixel'> <img src="../images/pixels/music.gif" style="max-width: 40px;">
+                <div class='overlay'>
+                    <div class='playpause'><i class="fas fa-play"></i></div>
+                </div>
+            </div>
+            <div id='musictitle'> <span class='marquee'>wind chimes</span> </div>
+        </div> <audio id='musicsrc' loop src='https://dl.dropbox.com/scl/fi/207sozz1oxbnjuldcx9up/wind-chimes.mp3?rlkey=g80h8r4oygb24yl6r5ygayi9f&amp;dl=0'></audio>
+
+
+<script>
+    document.querySelector('.playpause').addEventListener('click', playpause);
+    
+    function playpause() {
+      if (document.querySelector('.playpause').innerHTML == '<i class="fas fa-play"></i>') {
+        document.querySelector('#musicsrc').play();
+        document.querySelector('.playpause').innerHTML = '<i class="fas fa-pause"></i>';
+      } else {
+        document.querySelector('#musicsrc').pause();
+        document.querySelector('.playpause').innerHTML = '<i class="fas fa-play"></i>';
+      }
+    }
+</script>
+<form class="search"> <input type="text" class="searchTerm" placeholder="Search..."> <button aria-label="submit" type="submit" class="searchButton"> <i class="fa fa-search"></i> </button> </form>
+
+<ul class="searchResults"></ul></nav>
+
+    <div class="grid">
+        
+        <div class="item large">
+            <div class="cards"><div class="cardsHeader">
+    <div class="cardsControls">
+            <div> <i class="fa-solid fa-arrows-up-down-left-right"></i></div>
+            <div> <i class="fa-solid fa-window-minimize"></i> <i class="fa-regular fa-window-restore"></i> <i class="fa-solid fa-xmark"></i></div>
+    </div>
+</div><div class="cardsBody">
+                    <h1>#Library Bulletin</h1>
+                    <p style="font-style:italic;">Current Number of Library Entries: <span id="entry-count">79</span></p>
+                    <p>A growing catalog of media I've collected. Click on an entry to open a preview.</p>
+                    <details>
+                        <summary style="font-weight:bold;">NOTES</summary>
+                        <ul>
+                            <li>In the spirit of maintaining a digital "library," items listed are free. All entries have a "Check out" link that allows you to download or view the content.</li>
+                            <ul>
+                                <li>Some links, specifically ones that are sourced from the Internet Archive's Open Library, may require you to have an account to access the content.</li>
+                                <li>Due to <a href="https://www.eff.org/cases/hachette-v-internet-archive">Hachette v. Internet Archive</a>, many Open Library entries are unavailable. Although the IA is appealing the court decision, in the meantime, I have started to look for different sourcing.</li>
+                            </ul>
+                            <li>Click on the arrows by each cell header to sort the data (ascending/descending).</li>
+                            <li>Something being in the library does not mean I endorse it.</li>
+                            <li>If a preview isn't loading, it's likely an essay whose host site doesn't allow embeds. You'll have to click the Check Out link to see it directly.</li>
+                            <li>Content is very, very loosely organized and incomplete.</li>
+                            <li>I have not specified content warnings for individual entries; please proceed with caution.</li>
+                            <li>Yes, I know multiple author support is broken. I will (probably) fix it eventually.</li>
+                            <li>Be aware that I also use the library to bookmark stuff for school.</li>
+                        </ul>    
+                      </details>
+               
+                    <div class="library-table-wrapper">
+                        <table class="library-table">
+                            <thead>
+                                <tr>
+                                    <th class="title-header">Title <span class="sort-indicator" id="title-sort">↑</span></th>
+                                    <th class="author-header">Author <span class="sort-indicator" id="author-sort">↑</span></th>
+                                    <th class="year-header">Year <span class="sort-indicator" id="year-sort">↑</span></th>
+                                    <th class="category-header">Category <span class="sort-indicator" id="category-sort">↑</span></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                
+                                <tr class="library-item" 
+                                    data-title="Murder on the Orient Express" 
+                                    data-author="Agatha Christie" 
+                                    data-year="1934" 
+                                    data-category="Books" 
+                                    data-summary="" 
+                                    data-link="https://archive.org/details/isbn_9780007659579/mode/2up?view=theater">
+                                    <td>Murder on the Orient Express</td>
+                                    <td>Agatha Christie</td>
+                                    <td>1934</td>
+                                    <td>Books</td>
+                                </tr>
+                                
+                                <tr class="library-item" 
+                                    data-title="The Mystery of the Blue Train" 
+                                    data-author="Agatha Christie" 
+                                    data-year="1928" 
+                                    data-category="Books" 
+                                    data-summary="" 
+                                    data-link="https://www.gutenberg.org/cache/epub/72824/pg72824-images.html">
+                                    <td>The Mystery of the Blue Train</td>
+                                    <td>Agatha Christie</td>
+                                    <td>1928</td>
+                                    <td>Books</td>
+                                </tr>
+                                
+                                <tr class="library-item" 
+                                    data-title="The Hour of the Star" 
+                                    data-author="Clarice Lispector" 
+                                    data-year="1992" 
+                                    data-category="Books" 
+                                    data-summary="" 
+                                    data-link="https://archive.org/details/hourofst00lisp/mode/2up?view=theater">
+                                    <td>The Hour of the Star</td>
+                                    <td>Clarice Lispector</td>
+                                    <td>1992</td>
+                                    <td>Books</td>
+                                </tr>
+                                
+                                <tr class="library-item" 
+                                    data-title="The Vegetarian" 
+                                    data-author="Han Kang" 
+                                    data-year="2007" 
+                                    data-category="Books" 
+                                    data-summary="" 
+                                    data-link="https://archive.org/details/the-vegetarian-a-novel-pdfdrive/mode/2up?view=theater">
+                                    <td>The Vegetarian</td>
+                                    <td>Han Kang</td>
+                                    <td>2007</td>
+                                    <td>Books</td>
+                                </tr>
+                                
+                                <tr class="library-item" 
+                                    data-title="Automate the Boring Stuff with Python" 
+                                    data-author="Al Sweigart" 
+                                    data-year="2019" 
+                                    data-category="Books" 
+                                    data-summary="" 
+                                    data-link="https://automatetheboringstuff.com/2e/chapter0/">
+                                    <td>Automate the Boring Stuff with Python</td>
+                                    <td>Al Sweigart</td>
+                                    <td>2019</td>
+                                    <td>Books</td>
+                                </tr>
+                                
+                                <tr class="library-item" 
+                                    data-title="Algorithms &#43; Data Structures = Programs" 
+                                    data-author="Niklaus Wirth" 
+                                    data-year="1976" 
+                                    data-category="Books" 
+                                    data-summary="" 
+                                    data-link="https://archive.org/details/algorithmsdatast0000wirt/mode/2up?view=theater">
+                                    <td>Algorithms &#43; Data Structures = Programs</td>
+                                    <td>Niklaus Wirth</td>
+                                    <td>1976</td>
+                                    <td>Books</td>
+                                </tr>
+                                
+                                <tr class="library-item" 
+                                    data-title="Code: The Hidden Language Of Computer Hardware And Software" 
+                                    data-author="Charles Petzoid" 
+                                    data-year="2000" 
+                                    data-category="Books" 
+                                    data-summary="" 
+                                    data-link="https://archive.org/details/CharlesPetzoldCodeTheHiddenLanguageOfComputerHardwareAndSoftwareMicrosoftPress2000/mode/2up?view=theater">
+                                    <td>Code: The Hidden Language Of Computer Hardware And Software</td>
+                                    <td>Charles Petzoid</td>
+                                    <td>2000</td>
+                                    <td>Books</td>
+                                </tr>
+                                
+                                <tr class="library-item" 
+                                    data-title="An Introduction to Statistical Learning with Applications in R" 
+                                    data-author="Gareth James, Daniela Witten, Trevor Hastie, Robert Tibshirani" 
+                                    data-year="2013" 
+                                    data-category="Books" 
+                                    data-summary="" 
+                                    data-link="https://www.stat.berkeley.edu/~rabbee/s154/ISLR_First_Printing.pdf">
+                                    <td>An Introduction to Statistical Learning with Applications in R</td>
+                                    <td>Gareth James, Daniela Witten, Trevor Hastie, Robert Tibshirani</td>
+                                    <td>2013</td>
+                                    <td>Books</td>
+                                </tr>
+                                
+                                <tr class="library-item" 
+                                    data-title="Support Vector Machines in R" 
+                                    data-author="Alexandros Karatzoglou, David Meyer, Kurt Hornik" 
+                                    data-year="2006" 
+                                    data-category="Papers" 
+                                    data-summary="" 
+                                    data-link="https://research.wu.ac.at/ws/portalfiles/portal/19843135/document.pdf">
+                                    <td>Support Vector Machines in R</td>
+                                    <td>Alexandros Karatzoglou, David Meyer, Kurt Hornik</td>
+                                    <td>2006</td>
+                                    <td>Papers</td>
+                                </tr>
+                                
+                                <tr class="library-item" 
+                                    data-title="A survey of cross-validation procedures for model selection" 
+                                    data-author="Sylvain Arlot, Alain Celisse" 
+                                    data-year="2010" 
+                                    data-category="Papers" 
+                                    data-summary="" 
+                                    data-link="https://hal.science/file/index/docid/407906/filename/preprintLilleArlotCelisse.pdf">
+                                    <td>A survey of cross-validation procedures for model selection</td>
+                                    <td>Sylvain Arlot, Alain Celisse</td>
+                                    <td>2010</td>
+                                    <td>Papers</td>
+                                </tr>
+                                
+                                <tr class="library-item" 
+                                    data-title="The Vinyl Box - Collection of Vinyl Rips" 
+                                    data-author="Several" 
+                                    data-year="Unknown" 
+                                    data-category="Audio" 
+                                    data-summary="" 
+                                    data-link="https://archive.org/details/the-vinyl-box?tab=collection">
+                                    <td>The Vinyl Box - Collection of Vinyl Rips</td>
+                                    <td>Several</td>
+                                    <td>Unknown</td>
+                                    <td>Audio</td>
+                                </tr>
+                                
+                                <tr class="library-item" 
+                                    data-title="Akira" 
+                                    data-author="Katsuhiro Otomo" 
+                                    data-year="1988" 
+                                    data-category="Video" 
+                                    data-summary="" 
+                                    data-link="https://www.youtube.com/embed/g5b-yf-N134">
+                                    <td>Akira</td>
+                                    <td>Katsuhiro Otomo</td>
+                                    <td>1988</td>
+                                    <td>Video</td>
+                                </tr>
+                                
+                                <tr class="library-item" 
+                                    data-title="Angel&#39;s Egg" 
+                                    data-author="Mamoru Oshii" 
+                                    data-year="1985" 
+                                    data-category="Video" 
+                                    data-summary="" 
+                                    data-link="https://archive.org/embed/angels-egg-1985-blu-ray-1080p-jap-audio/Angel&#39;s&#43;Egg&#43;(1985)/Angel&#39;s&#43;Egg&#43;(1985&#43;BluRay&#43;-&#43;1080p&#43;JAP&#43;Audio).mkv">
+                                    <td>Angel&#39;s Egg</td>
+                                    <td>Mamoru Oshii</td>
+                                    <td>1985</td>
+                                    <td>Video</td>
+                                </tr>
+                                
+                                <tr class="library-item" 
+                                    data-title="The Persistent Desire: A Femme-Butch Reader" 
+                                    data-author="Joan Nestle" 
+                                    data-year="1992" 
+                                    data-category="Books" 
+                                    data-summary="" 
+                                    data-link="https://archive.org/details/persistentdesire00nest/mode/2up?view=theater">
+                                    <td>The Persistent Desire: A Femme-Butch Reader</td>
+                                    <td>Joan Nestle</td>
+                                    <td>1992</td>
+                                    <td>Books</td>
+                                </tr>
+                                
+                                <tr class="library-item" 
+                                    data-title="The Laugh of the Medusa" 
+                                    data-author="Hélène Cixous" 
+                                    data-year="1975" 
+                                    data-category="Essays" 
+                                    data-summary="" 
+                                    data-link="https://www2.csudh.edu/ccauthen/576F10/cixous.pdf">
+                                    <td>The Laugh of the Medusa</td>
+                                    <td>Hélène Cixous</td>
+                                    <td>1975</td>
+                                    <td>Essays</td>
+                                </tr>
+                                
+                                <tr class="library-item" 
+                                    data-title="Sister Outsider: Essays and Speeches" 
+                                    data-author="Audre Lorde" 
+                                    data-year="1984" 
+                                    data-category="Books" 
+                                    data-summary="" 
+                                    data-link="https://archive.org/details/sisteroutsideres00lord/mode/2up?view=theater">
+                                    <td>Sister Outsider: Essays and Speeches</td>
+                                    <td>Audre Lorde</td>
+                                    <td>1984</td>
+                                    <td>Books</td>
+                                </tr>
+                                
+                                <tr class="library-item" 
+                                    data-title="The Second Sex" 
+                                    data-author="Simone de Beauvoir" 
+                                    data-year="1949" 
+                                    data-category="Books" 
+                                    data-summary="" 
+                                    data-link="https://files.libcom.org/files/1949_simone-de-beauvoir-the-second-sex.pdf">
+                                    <td>The Second Sex</td>
+                                    <td>Simone de Beauvoir</td>
+                                    <td>1949</td>
+                                    <td>Books</td>
+                                </tr>
+                                
+                                <tr class="library-item" 
+                                    data-title="Situated Knowledges: The Science Question in Feminism and the Privilege of Partial Perspective" 
+                                    data-author="Donna Haraway" 
+                                    data-year="1988" 
+                                    data-category="Essays" 
+                                    data-summary="" 
+                                    data-link="https://philpapers.org/archive/harskt.pdf">
+                                    <td>Situated Knowledges: The Science Question in Feminism and the Privilege of Partial Perspective</td>
+                                    <td>Donna Haraway</td>
+                                    <td>1988</td>
+                                    <td>Essays</td>
+                                </tr>
+                                
+                                <tr class="library-item" 
+                                    data-title="A Cyborg Manifesto" 
+                                    data-author="Donna Haraway" 
+                                    data-year="1985" 
+                                    data-category="Essays" 
+                                    data-summary="" 
+                                    data-link="https://theanarchistlibrary.org/library/donna-haraway-a-cyborg-manifesto">
+                                    <td>A Cyborg Manifesto</td>
+                                    <td>Donna Haraway</td>
+                                    <td>1985</td>
+                                    <td>Essays</td>
+                                </tr>
+                                
+                                <tr class="library-item" 
+                                    data-title="I would rather be a cyborg than a goddess: Becoming-Intersectional in Assemblage Theory" 
+                                    data-author="Jasbir Puar" 
+                                    data-year="2012" 
+                                    data-category="Essays" 
+                                    data-summary="" 
+                                    data-link="https://www.ualberta.ca/en/institute-intersectionality-studies/media-library/intersectionality-readings/puar-i-would-rather-be-a-cyborg-than-a-goddess.pdf">
+                                    <td>I would rather be a cyborg than a goddess: Becoming-Intersectional in Assemblage Theory</td>
+                                    <td>Jasbir Puar</td>
+                                    <td>2012</td>
+                                    <td>Essays</td>
+                                </tr>
+                                
+                                <tr class="library-item" 
+                                    data-title="The Unhappy Marriage of Marxism and Feminism: Towards a More Progressive Union" 
+                                    data-author="Heidi I. Hartmann" 
+                                    data-year="1979" 
+                                    data-category="Essays" 
+                                    data-summary="" 
+                                    data-link="https://web.ics.purdue.edu/~hoganr/SOC 602/Hartmann_1979">
+                                    <td>The Unhappy Marriage of Marxism and Feminism: Towards a More Progressive Union</td>
+                                    <td>Heidi I. Hartmann</td>
+                                    <td>1979</td>
+                                    <td>Essays</td>
+                                </tr>
+                                
+                                <tr class="library-item" 
+                                    data-title="Understanding Patriarchy" 
+                                    data-author="bell hooks" 
+                                    data-year="2004" 
+                                    data-category="Essays" 
+                                    data-summary="" 
+                                    data-link="https://theanarchistlibrary.org/library/bell-hooks-understanding-patriarchy">
+                                    <td>Understanding Patriarchy</td>
+                                    <td>bell hooks</td>
+                                    <td>2004</td>
+                                    <td>Essays</td>
+                                </tr>
+                                
+                                <tr class="library-item" 
+                                    data-title="Ain&#39;t I a Woman: Black Women and Feminism" 
+                                    data-author="bell hooks" 
+                                    data-year="1981" 
+                                    data-category="Books" 
+                                    data-summary="" 
+                                    data-link="https://archive.org/details/ain-t-i-a-woman-black-women-and-feminism/mode/2up?view=theater">
+                                    <td>Ain&#39;t I a Woman: Black Women and Feminism</td>
+                                    <td>bell hooks</td>
+                                    <td>1981</td>
+                                    <td>Books</td>
+                                </tr>
+                                
+                                <tr class="library-item" 
+                                    data-title="Performing Postcolonial Feminine Identity as Shaman: Building Narrative Bridges Between Two Worlds" 
+                                    data-author="Soo Mi Lee" 
+                                    data-year="2015" 
+                                    data-category="Essays" 
+                                    data-summary="" 
+                                    data-link="https://escholarship.org/content/qt1jp6k3wg/qt1jp6k3wg_noSplash_9128ecae1bfd559e3774a52be3234672.pdf?t=p6piqw">
+                                    <td>Performing Postcolonial Feminine Identity as Shaman: Building Narrative Bridges Between Two Worlds</td>
+                                    <td>Soo Mi Lee</td>
+                                    <td>2015</td>
+                                    <td>Essays</td>
+                                </tr>
+                                
+                                <tr class="library-item" 
+                                    data-title="Gwangju Diary: Beyond Death, Beyond the Darkness of the Age" 
+                                    data-author="Lee Jae-eui" 
+                                    data-year="1985" 
+                                    data-category="Books" 
+                                    data-summary="" 
+                                    data-link="https://files.libcom.org/files/Gwangju diary resized-compressed.pdf">
+                                    <td>Gwangju Diary: Beyond Death, Beyond the Darkness of the Age</td>
+                                    <td>Lee Jae-eui</td>
+                                    <td>1985</td>
+                                    <td>Books</td>
+                                </tr>
+                                
+                                <tr class="library-item" 
+                                    data-title="Feminist Criticism, &#39;The Yellow Wallpaper,&#39; and the Politics of Color in America" 
+                                    data-author="Susan S. Lanser" 
+                                    data-year="1989" 
+                                    data-category="Essays" 
+                                    data-summary="" 
+                                    data-link="https://biblioteca-alternativa.noblogs.org/files/2013/01/yellowwallpaperandpoliticsofcolor.pdf">
+                                    <td>Feminist Criticism, &#39;The Yellow Wallpaper,&#39; and the Politics of Color in America</td>
+                                    <td>Susan S. Lanser</td>
+                                    <td>1989</td>
+                                    <td>Essays</td>
+                                </tr>
+                                
+                                <tr class="library-item" 
+                                    data-title="Stone Butch Blues" 
+                                    data-author="Leslie Feinberg" 
+                                    data-year="1993" 
+                                    data-category="Books" 
+                                    data-summary="" 
+                                    data-link="https://archive.org/details/StoneButchBlues/mode/2up?view=theater">
+                                    <td>Stone Butch Blues</td>
+                                    <td>Leslie Feinberg</td>
+                                    <td>1993</td>
+                                    <td>Books</td>
+                                </tr>
+                                
+                                <tr class="library-item" 
+                                    data-title="The Combahee River Collective Statement" 
+                                    data-author="Combahee River Collective" 
+                                    data-year="1977" 
+                                    data-category="Essays" 
+                                    data-summary="" 
+                                    data-link="https://americanstudies.yale.edu/sites/default/files/files/Keyword Coalition_Readings.pdf">
+                                    <td>The Combahee River Collective Statement</td>
+                                    <td>Combahee River Collective</td>
+                                    <td>1977</td>
+                                    <td>Essays</td>
+                                </tr>
+                                
+                                <tr class="library-item" 
+                                    data-title="Radical Feminist Therapy: Working in the context of violence" 
+                                    data-author="Bonnie Burstow" 
+                                    data-year="1992" 
+                                    data-category="Books" 
+                                    data-summary="" 
+                                    data-link="https://archive.org/details/bonnie-burstow-radical-feminist-therapy-working-in-the-context-of-violence/mode/2up?view=theater">
+                                    <td>Radical Feminist Therapy: Working in the context of violence</td>
+                                    <td>Bonnie Burstow</td>
+                                    <td>1992</td>
+                                    <td>Books</td>
+                                </tr>
+                                
+                                <tr class="library-item" 
+                                    data-title="A Critique of Posttraumatic Stress Disorder and the DSM" 
+                                    data-author="Bonnie Burstow" 
+                                    data-year="2005" 
+                                    data-category="Essays" 
+                                    data-summary="" 
+                                    data-link="https://www.brown.uk.com/diagnosis/burstow.pdf">
+                                    <td>A Critique of Posttraumatic Stress Disorder and the DSM</td>
+                                    <td>Bonnie Burstow</td>
+                                    <td>2005</td>
+                                    <td>Essays</td>
+                                </tr>
+                                
+                                <tr class="library-item" 
+                                    data-title="Failure to Comply: Madness and/as Testimony" 
+                                    data-author="Clementine Morrigan" 
+                                    data-year="2005" 
+                                    data-category="Essays" 
+                                    data-summary="" 
+                                    data-link="https://cjds.uwaterloo.ca/index.php/cjds/article/view/366/599">
+                                    <td>Failure to Comply: Madness and/as Testimony</td>
+                                    <td>Clementine Morrigan</td>
+                                    <td>2005</td>
+                                    <td>Essays</td>
+                                </tr>
+                                
+                                <tr class="library-item" 
+                                    data-title="The Protest Psychosis: How Schizophrenia Became a Black Disease" 
+                                    data-author="Jonathan M. Metzl" 
+                                    data-year="2010" 
+                                    data-category="Books" 
+                                    data-summary="" 
+                                    data-link="https://archive.org/details/protestpsychosis0000metz/mode/2up?view=theater">
+                                    <td>The Protest Psychosis: How Schizophrenia Became a Black Disease</td>
+                                    <td>Jonathan M. Metzl</td>
+                                    <td>2010</td>
+                                    <td>Books</td>
+                                </tr>
+                                
+                                <tr class="library-item" 
+                                    data-title="Assata: An Autobiography" 
+                                    data-author="Assata Shakur" 
+                                    data-year="1987" 
+                                    data-category="Books" 
+                                    data-summary="" 
+                                    data-link="https://archive.org/details/Assata/mode/2up?view=theater">
+                                    <td>Assata: An Autobiography</td>
+                                    <td>Assata Shakur</td>
+                                    <td>1987</td>
+                                    <td>Books</td>
+                                </tr>
+                                
+                                <tr class="library-item" 
+                                    data-title="Are Prisons Obsolete?" 
+                                    data-author="Angela Y. Davis" 
+                                    data-year="2003" 
+                                    data-category="Books" 
+                                    data-summary="" 
+                                    data-link="https://theanarchistlibrary.org/mirror/a/ay/angela-y-davis-are-prisons-obsolete.pdf">
+                                    <td>Are Prisons Obsolete?</td>
+                                    <td>Angela Y. Davis</td>
+                                    <td>2003</td>
+                                    <td>Books</td>
+                                </tr>
+                                
+                                <tr class="library-item" 
+                                    data-title="If Black English Isn&#39;t a Language, Then Tell Me, What Is?" 
+                                    data-author="James Baldwin" 
+                                    data-year="1979" 
+                                    data-category="Essays" 
+                                    data-summary="" 
+                                    data-link="https://archive.nytimes.com/www.nytimes.com/books/98/03/29/specials/baldwin-english.html?source=post_page">
+                                    <td>If Black English Isn&#39;t a Language, Then Tell Me, What Is?</td>
+                                    <td>James Baldwin</td>
+                                    <td>1979</td>
+                                    <td>Essays</td>
+                                </tr>
+                                
+                                <tr class="library-item" 
+                                    data-title="We Will Shoot Back: Armed Resistance in the Mississippi Freedom Movement" 
+                                    data-author="Akinyele Omowale Umoja" 
+                                    data-year="2013" 
+                                    data-category="Books" 
+                                    data-summary="" 
+                                    data-link="https://files.libcom.org/files/2022-12/Akinyele Omowale Umoja - We Will Shoot Back_ Armed Resistance in the Mississippi Freedom Movement-NYU Press (2013).pdf">
+                                    <td>We Will Shoot Back: Armed Resistance in the Mississippi Freedom Movement</td>
+                                    <td>Akinyele Omowale Umoja</td>
+                                    <td>2013</td>
+                                    <td>Books</td>
+                                </tr>
+                                
+                                <tr class="library-item" 
+                                    data-title="Blackshirts and Reds: Rational Fascism and the Overthrow of Communism" 
+                                    data-author="Michael Parenti" 
+                                    data-year="1997" 
+                                    data-category="Books" 
+                                    data-summary="" 
+                                    data-link="https://archive.org/details/michael-parenti-blackshirts-and-reds/mode/2up?view=theater">
+                                    <td>Blackshirts and Reds: Rational Fascism and the Overthrow of Communism</td>
+                                    <td>Michael Parenti</td>
+                                    <td>1997</td>
+                                    <td>Books</td>
+                                </tr>
+                                
+                                <tr class="library-item" 
+                                    data-title="Capital, Volume 1" 
+                                    data-author="Karl Marx" 
+                                    data-year="1876" 
+                                    data-category="Books" 
+                                    data-summary="" 
+                                    data-link="https://archive.org/details/capitalvol1/mode/2up?view=theater">
+                                    <td>Capital, Volume 1</td>
+                                    <td>Karl Marx</td>
+                                    <td>1876</td>
+                                    <td>Books</td>
+                                </tr>
+                                
+                                <tr class="library-item" 
+                                    data-title="The Communist Manifesto" 
+                                    data-author="Karl Marx, Friedrich Engels" 
+                                    data-year="1847" 
+                                    data-category="Books" 
+                                    data-summary="" 
+                                    data-link="https://archive.org/details/manifestoofcommu00marx_1/mode/2up?view=theater">
+                                    <td>The Communist Manifesto</td>
+                                    <td>Karl Marx, Friedrich Engels</td>
+                                    <td>1847</td>
+                                    <td>Books</td>
+                                </tr>
+                                
+                                <tr class="library-item" 
+                                    data-title="The State And Revolution" 
+                                    data-author="Vladimir Lenin" 
+                                    data-year="1917" 
+                                    data-category="Books" 
+                                    data-summary="" 
+                                    data-link="https://archive.org/details/thestateandrevolutionbyv.i.lenin/mode/2up?view=theater">
+                                    <td>The State And Revolution</td>
+                                    <td>Vladimir Lenin</td>
+                                    <td>1917</td>
+                                    <td>Books</td>
+                                </tr>
+                                
+                                <tr class="library-item" 
+                                    data-title="Necessary Illusions: Thought Control in Democratic Societies" 
+                                    data-author="Noam Chomsky" 
+                                    data-year="1989" 
+                                    data-category="Books" 
+                                    data-summary="" 
+                                    data-link="https://archive.org/details/necessaryillusio0000choma/mode/2up?view=theater">
+                                    <td>Necessary Illusions: Thought Control in Democratic Societies</td>
+                                    <td>Noam Chomsky</td>
+                                    <td>1989</td>
+                                    <td>Books</td>
+                                </tr>
+                                
+                                <tr class="library-item" 
+                                    data-title="On Anarchism" 
+                                    data-author="Noam Chomsky" 
+                                    data-year="2005" 
+                                    data-category="Books" 
+                                    data-summary="" 
+                                    data-link="https://theanarchistlibrary.org/library/noam-chomsky-on-anarchism">
+                                    <td>On Anarchism</td>
+                                    <td>Noam Chomsky</td>
+                                    <td>2005</td>
+                                    <td>Books</td>
+                                </tr>
+                                
+                                <tr class="library-item" 
+                                    data-title="Counter-Revolutionary Violence: Bloodbaths in Fact and Propaganda" 
+                                    data-author="Noam Chomsky" 
+                                    data-year="1973" 
+                                    data-category="Books" 
+                                    data-summary="" 
+                                    data-link="https://chomsky.info/counter-revolutionary-violence/">
+                                    <td>Counter-Revolutionary Violence: Bloodbaths in Fact and Propaganda</td>
+                                    <td>Noam Chomsky</td>
+                                    <td>1973</td>
+                                    <td>Books</td>
+                                </tr>
+                                
+                                <tr class="library-item" 
+                                    data-title="Ideology and Ideological State Apparatuses" 
+                                    data-author="Louis Althusser" 
+                                    data-year="1970" 
+                                    data-category="Essays" 
+                                    data-summary="" 
+                                    data-link="https://www.csun.edu/~snk1966/Lous Althusser Ideology and Ideological State Apparatuses.pdf">
+                                    <td>Ideology and Ideological State Apparatuses</td>
+                                    <td>Louis Althusser</td>
+                                    <td>1970</td>
+                                    <td>Essays</td>
+                                </tr>
+                                
+                                <tr class="library-item" 
+                                    data-title="Reform or Revolution?" 
+                                    data-author="Rosa Luxemburg" 
+                                    data-year="1899" 
+                                    data-category="Essays" 
+                                    data-summary="" 
+                                    data-link="https://ycl.org.uk/wp-content/uploads/2021/11/C03-Reform-or-Revolution.pdf">
+                                    <td>Reform or Revolution?</td>
+                                    <td>Rosa Luxemburg</td>
+                                    <td>1899</td>
+                                    <td>Essays</td>
+                                </tr>
+                                
+                                <tr class="library-item" 
+                                    data-title="The Motorcycle Diaries" 
+                                    data-author="Ernesto Che Guevara" 
+                                    data-year="1952" 
+                                    data-category="Books" 
+                                    data-summary="" 
+                                    data-link="https://archive.org/details/motorcyclediariescheguevara/mode/2up?view=theater">
+                                    <td>The Motorcycle Diaries</td>
+                                    <td>Ernesto Che Guevara</td>
+                                    <td>1952</td>
+                                    <td>Books</td>
+                                </tr>
+                                
+                                <tr class="library-item" 
+                                    data-title="We Are Cuba!: How a Revolutionary People Have Survived in a Post-Soviet World" 
+                                    data-author="Helen Yaffe" 
+                                    data-year="2020" 
+                                    data-category="Books" 
+                                    data-summary="" 
+                                    data-link="https://welshundergroundnetwork.cymru/wp-content/uploads/2020/12/helen-yaffe-we-are-cuba_-how-a-revolutionary-people-have-survived-in-a-post-soviet-world-2019-yale-university-press-libgen.lc_.pdf">
+                                    <td>We Are Cuba!: How a Revolutionary People Have Survived in a Post-Soviet World</td>
+                                    <td>Helen Yaffe</td>
+                                    <td>2020</td>
+                                    <td>Books</td>
+                                </tr>
+                                
+                                <tr class="library-item" 
+                                    data-title="Emelí Vélez de Vando Papers" 
+                                    data-author="Unknown" 
+                                    data-year="1919 - 1999" 
+                                    data-category="Archives" 
+                                    data-summary="" 
+                                    data-link="https://centroca.hunter.cuny.edu/Detail/collections/32">
+                                    <td>Emelí Vélez de Vando Papers</td>
+                                    <td>Unknown</td>
+                                    <td>1919 - 1999</td>
+                                    <td>Archives</td>
+                                </tr>
+                                
+                                <tr class="library-item" 
+                                    data-title="Juanita Arocho Papers" 
+                                    data-author="Unknown" 
+                                    data-year="1940 - 1994" 
+                                    data-category="Archives" 
+                                    data-summary="" 
+                                    data-link="https://centroca.hunter.cuny.edu/Detail/collections/40">
+                                    <td>Juanita Arocho Papers</td>
+                                    <td>Unknown</td>
+                                    <td>1940 - 1994</td>
+                                    <td>Archives</td>
+                                </tr>
+                                
+                                <tr class="library-item" 
+                                    data-title="American Imperialism in Hawai’i: How the United States Illegally Usurped a Sovereign Nation and Got Away With It" 
+                                    data-author="Noelani Nasser" 
+                                    data-year="2021" 
+                                    data-category="Essays" 
+                                    data-summary="" 
+                                    data-link="https://repository.uclawsf.edu/cgi/viewcontent.cgi?article=2135&amp;context=hastings_constitutional_law_quaterly">
+                                    <td>American Imperialism in Hawai’i: How the United States Illegally Usurped a Sovereign Nation and Got Away With It</td>
+                                    <td>Noelani Nasser</td>
+                                    <td>2021</td>
+                                    <td>Essays</td>
+                                </tr>
+                                
+                                <tr class="library-item" 
+                                    data-title="The Palestine-Israel Conflict: A Basic Introduction" 
+                                    data-author="Gregory Harms, Todd M. Ferry" 
+                                    data-year="2005" 
+                                    data-category="Books" 
+                                    data-summary="" 
+                                    data-link="https://archive.org/details/palestineisraelc0000harm/mode/2up?view=theater">
+                                    <td>The Palestine-Israel Conflict: A Basic Introduction</td>
+                                    <td>Gregory Harms, Todd M. Ferry</td>
+                                    <td>2005</td>
+                                    <td>Books</td>
+                                </tr>
+                                
+                                <tr class="library-item" 
+                                    data-title="Democracy Now!" 
+                                    data-author="Amy Goodman" 
+                                    data-year="1996 - present" 
+                                    data-category="Video" 
+                                    data-summary="" 
+                                    data-link="https://archive.org/details/democracy_now_vid">
+                                    <td>Democracy Now!</td>
+                                    <td>Amy Goodman</td>
+                                    <td>1996 - present</td>
+                                    <td>Video</td>
+                                </tr>
+                                
+                                <tr class="library-item" 
+                                    data-title="Build Your Own Solidarity Network" 
+                                    data-author="Workers Solidarity Alliance" 
+                                    data-year="2011" 
+                                    data-category="Zines" 
+                                    data-summary="" 
+                                    data-link="https://files.libcom.org/files/seasol-pamphlet-expanded-US.pdf">
+                                    <td>Build Your Own Solidarity Network</td>
+                                    <td>Workers Solidarity Alliance</td>
+                                    <td>2011</td>
+                                    <td>Zines</td>
+                                </tr>
+                                
+                                <tr class="library-item" 
+                                    data-title="Vocational Awe and Librarianship: The Lies We Tell Ourselves" 
+                                    data-author="Fobazi Ettarh" 
+                                    data-year="2018" 
+                                    data-category="Essays" 
+                                    data-summary="" 
+                                    data-link="https://www.inthelibrarywiththeleadpipe.org/2018/vocational-awe/">
+                                    <td>Vocational Awe and Librarianship: The Lies We Tell Ourselves</td>
+                                    <td>Fobazi Ettarh</td>
+                                    <td>2018</td>
+                                    <td>Essays</td>
+                                </tr>
+                                
+                                <tr class="library-item" 
+                                    data-title="The Primal Pleasure and Brutal History of Sugar" 
+                                    data-author="Ruby Tandoh" 
+                                    data-year="2018" 
+                                    data-category="Essays" 
+                                    data-summary="" 
+                                    data-link="https://www.eater.com/2018/8/6/17631452/ruby-tandoh-sugar-history-kara-walker-will-cotton">
+                                    <td>The Primal Pleasure and Brutal History of Sugar</td>
+                                    <td>Ruby Tandoh</td>
+                                    <td>2018</td>
+                                    <td>Essays</td>
+                                </tr>
+                                
+                                <tr class="library-item" 
+                                    data-title="Why Petroleum Did Not Save the Whales" 
+                                    data-author="Richard York" 
+                                    data-year="2017" 
+                                    data-category="Essays" 
+                                    data-summary="" 
+                                    data-link="https://journals.sagepub.com/doi/pdf/10.1177/2378023117739217">
+                                    <td>Why Petroleum Did Not Save the Whales</td>
+                                    <td>Richard York</td>
+                                    <td>2017</td>
+                                    <td>Essays</td>
+                                </tr>
+                                
+                                <tr class="library-item" 
+                                    data-title="Shmita Means Total Destroy" 
+                                    data-author="Fayer Collective" 
+                                    data-year="2022" 
+                                    data-category="Essays" 
+                                    data-summary="" 
+                                    data-link="https://jewishcurrents.org/shmita-means-total-destroy">
+                                    <td>Shmita Means Total Destroy</td>
+                                    <td>Fayer Collective</td>
+                                    <td>2022</td>
+                                    <td>Essays</td>
+                                </tr>
+                                
+                                <tr class="library-item" 
+                                    data-title="Afghanistan: Forging Civilizations along the Silk Road" 
+                                    data-author="Joan Aruz, Elisabetta Valtz Fino" 
+                                    data-year="2012" 
+                                    data-category="Books" 
+                                    data-summary="" 
+                                    data-link="https://archive.org/details/afghanistan-forging-civilizations-along-the-silk-road/mode/2up?view=theater">
+                                    <td>Afghanistan: Forging Civilizations along the Silk Road</td>
+                                    <td>Joan Aruz, Elisabetta Valtz Fino</td>
+                                    <td>2012</td>
+                                    <td>Books</td>
+                                </tr>
+                                
+                                <tr class="library-item" 
+                                    data-title="The Elements of Style 4th Edition" 
+                                    data-author="Willian Strunk Jr., E.B. White" 
+                                    data-year="1999" 
+                                    data-category="Books" 
+                                    data-summary="" 
+                                    data-link="https://ia804502.us.archive.org/5/items/pdfy-2_qp8jQ61OI6NHwa/Strunk %26 White - The Elements of Style%2C 4th Edition.pdf">
+                                    <td>The Elements of Style 4th Edition</td>
+                                    <td>Willian Strunk Jr., E.B. White</td>
+                                    <td>1999</td>
+                                    <td>Books</td>
+                                </tr>
+                                
+                                <tr class="library-item" 
+                                    data-title="Grimms’ Fairy Tales" 
+                                    data-author="Jacob and Wilhelm Grimm" 
+                                    data-year="1812" 
+                                    data-category="Books" 
+                                    data-summary="" 
+                                    data-link="https://www.gutenberg.org/cache/epub/2591/pg2591-images.html">
+                                    <td>Grimms’ Fairy Tales</td>
+                                    <td>Jacob and Wilhelm Grimm</td>
+                                    <td>1812</td>
+                                    <td>Books</td>
+                                </tr>
+                                
+                                <tr class="library-item" 
+                                    data-title="The Black Unicorn" 
+                                    data-author="Audre Lorde" 
+                                    data-year="1978" 
+                                    data-category="Books" 
+                                    data-summary="" 
+                                    data-link="https://archive.org/details/blackunicornpoem00lord/page/n7/mode/2up?view=theater">
+                                    <td>The Black Unicorn</td>
+                                    <td>Audre Lorde</td>
+                                    <td>1978</td>
+                                    <td>Books</td>
+                                </tr>
+                                
+                                <tr class="library-item" 
+                                    data-title="Night Sky with Exit Wounds" 
+                                    data-author="Ocean Vuong" 
+                                    data-year="2016" 
+                                    data-category="Books" 
+                                    data-summary="" 
+                                    data-link="https://archive.org/details/nightskywithexit0000vuon/mode/2up?view=theater">
+                                    <td>Night Sky with Exit Wounds</td>
+                                    <td>Ocean Vuong</td>
+                                    <td>2016</td>
+                                    <td>Books</td>
+                                </tr>
+                                
+                                <tr class="library-item" 
+                                    data-title="Lainzine #1" 
+                                    data-author="Several" 
+                                    data-year="2015" 
+                                    data-category="Zines" 
+                                    data-summary="" 
+                                    data-link="https://lainzine.org/all-releases/lainzine01.pdf">
+                                    <td>Lainzine #1</td>
+                                    <td>Several</td>
+                                    <td>2015</td>
+                                    <td>Zines</td>
+                                </tr>
+                                
+                                <tr class="library-item" 
+                                    data-title="Lainzine #2" 
+                                    data-author="Several" 
+                                    data-year="2015" 
+                                    data-category="Zines" 
+                                    data-summary="" 
+                                    data-link="https://lainzine.org/all-releases/lainzine02.pdf">
+                                    <td>Lainzine #2</td>
+                                    <td>Several</td>
+                                    <td>2015</td>
+                                    <td>Zines</td>
+                                </tr>
+                                
+                                <tr class="library-item" 
+                                    data-title="Lainzine #3" 
+                                    data-author="Several" 
+                                    data-year="2016" 
+                                    data-category="Zines" 
+                                    data-summary="" 
+                                    data-link="https://lainzine.org/all-releases/lainzine03.pdf">
+                                    <td>Lainzine #3</td>
+                                    <td>Several</td>
+                                    <td>2016</td>
+                                    <td>Zines</td>
+                                </tr>
+                                
+                                <tr class="library-item" 
+                                    data-title="A Rough Guide to Bicycle Maintenance" 
+                                    data-author="Shelley Lynn Jackson" 
+                                    data-year="2003" 
+                                    data-category="Zines" 
+                                    data-summary="" 
+                                    data-link="https://archive.org/details/a-rough-guide-to-bicycle-maintenance_202108/mode/2up?view=theater">
+                                    <td>A Rough Guide to Bicycle Maintenance</td>
+                                    <td>Shelley Lynn Jackson</td>
+                                    <td>2003</td>
+                                    <td>Zines</td>
+                                </tr>
+                                
+                                <tr class="library-item" 
+                                    data-title="Earth Alchemy: the art &amp; science of compost" 
+                                    data-author="K. Semilla" 
+                                    data-year="Unknown" 
+                                    data-category="Zines" 
+                                    data-summary="" 
+                                    data-link="https://www.sherwoodforestzinelibrary.org/_files/ugd/8c0bf9_648eaf806a8e49c08d5a49ecd32c805c.pdf">
+                                    <td>Earth Alchemy: the art &amp; science of compost</td>
+                                    <td>K. Semilla</td>
+                                    <td>Unknown</td>
+                                    <td>Zines</td>
+                                </tr>
+                                
+                                <tr class="library-item" 
+                                    data-title="Fingerprints" 
+                                    data-author="Andy Yang" 
+                                    data-year="Unknown" 
+                                    data-category="Zines" 
+                                    data-summary="" 
+                                    data-link="https://3584a435-0345-46ee-97d3-fb7bd0da023c.filesusr.com/ugd/47841f_e89042f6a24544f8826905dd448702e3.pdf">
+                                    <td>Fingerprints</td>
+                                    <td>Andy Yang</td>
+                                    <td>Unknown</td>
+                                    <td>Zines</td>
+                                </tr>
+                                
+                                <tr class="library-item" 
+                                    data-title="Green Scared?" 
+                                    data-author="Rolling Thunder" 
+                                    data-year="2008" 
+                                    data-category="Zines" 
+                                    data-summary="" 
+                                    data-link="https://files.sproutdistro.com/green-scared-screen.pdf">
+                                    <td>Green Scared?</td>
+                                    <td>Rolling Thunder</td>
+                                    <td>2008</td>
+                                    <td>Zines</td>
+                                </tr>
+                                
+                                <tr class="library-item" 
+                                    data-title="Turn Off Your Phone! And other basic digital security strategies" 
+                                    data-author="Unknown" 
+                                    data-year="2023" 
+                                    data-category="Zines" 
+                                    data-summary="" 
+                                    data-link="https://files.sproutdistro.com/Turn_Off_Your_Phone-screen.pdf">
+                                    <td>Turn Off Your Phone! And other basic digital security strategies</td>
+                                    <td>Unknown</td>
+                                    <td>2023</td>
+                                    <td>Zines</td>
+                                </tr>
+                                
+                                <tr class="library-item" 
+                                    data-title="Revolutionary Girl Utena" 
+                                    data-author="Nozomi Entertainment" 
+                                    data-year="1997" 
+                                    data-category="Video" 
+                                    data-summary="" 
+                                    data-link="https://www.youtube.com/embed/videoseries?si=e8w3it8nn96W7O2d&amp;amp;list=PLrrh84y760v-hDEulas0Tp_wiQy0FcjLl">
+                                    <td>Revolutionary Girl Utena</td>
+                                    <td>Nozomi Entertainment</td>
+                                    <td>1997</td>
+                                    <td>Video</td>
+                                </tr>
+                                
+                                <tr class="library-item" 
+                                    data-title="CBS Radio Mystery Theater" 
+                                    data-author="Himan Brown" 
+                                    data-year="1974 - 1982" 
+                                    data-category="Audio" 
+                                    data-summary="" 
+                                    data-link="https://archive.org/details/cbsrmt-74-02-08-33-conspiracy-to-defraud/CBSRMT+74-01-06+(1)+The+Old+Ones+Are+Hard+to+Kill.mp3">
+                                    <td>CBS Radio Mystery Theater</td>
+                                    <td>Himan Brown</td>
+                                    <td>1974 - 1982</td>
+                                    <td>Audio</td>
+                                </tr>
+                                
+                                <tr class="library-item" 
+                                    data-title="Wuthering Heights" 
+                                    data-author="Emily Brontë" 
+                                    data-year="1847" 
+                                    data-category="Books" 
+                                    data-summary="" 
+                                    data-link="https://www.gutenberg.org/cache/epub/768/pg768-images.html">
+                                    <td>Wuthering Heights</td>
+                                    <td>Emily Brontë</td>
+                                    <td>1847</td>
+                                    <td>Books</td>
+                                </tr>
+                                
+                                <tr class="library-item" 
+                                    data-title="Moby-Dick or, the Whale" 
+                                    data-author="Herman Melville" 
+                                    data-year="1851" 
+                                    data-category="Books" 
+                                    data-summary="" 
+                                    data-link="https://www.gutenberg.org/cache/epub/2701/pg2701-images.html">
+                                    <td>Moby-Dick or, the Whale</td>
+                                    <td>Herman Melville</td>
+                                    <td>1851</td>
+                                    <td>Books</td>
+                                </tr>
+                                
+                                <tr class="library-item" 
+                                    data-title="Metamorphosis" 
+                                    data-author="Franz Kafka" 
+                                    data-year="1915" 
+                                    data-category="Books" 
+                                    data-summary="" 
+                                    data-link="https://www.gutenberg.org/cache/epub/5200/pg5200-images.html">
+                                    <td>Metamorphosis</td>
+                                    <td>Franz Kafka</td>
+                                    <td>1915</td>
+                                    <td>Books</td>
+                                </tr>
+                                
+                                <tr class="library-item" 
+                                    data-title="Go Tell it on the Mountain" 
+                                    data-author="James Baldwin" 
+                                    data-year="2000" 
+                                    data-category="Books" 
+                                    data-summary="" 
+                                    data-link="https://www.cardozohigh.com/ourpages/auto/2017/6/14/45811644/Go Tell it on the Mountain.pdf?rnd=1654529993146">
+                                    <td>Go Tell it on the Mountain</td>
+                                    <td>James Baldwin</td>
+                                    <td>2000</td>
+                                    <td>Books</td>
+                                </tr>
+                                
+                                <tr class="library-item" 
+                                    data-title="The Stranger" 
+                                    data-author="Albert Camus" 
+                                    data-year="1989" 
+                                    data-category="Books" 
+                                    data-summary="" 
+                                    data-link="https://archive.org/details/the-stranger_202404/mode/2up?view=theater">
+                                    <td>The Stranger</td>
+                                    <td>Albert Camus</td>
+                                    <td>1989</td>
+                                    <td>Books</td>
+                                </tr>
+                                
+                                <tr class="library-item" 
+                                    data-title="Reincarnation" 
+                                    data-author="Takashi Shimizu" 
+                                    data-year="2005" 
+                                    data-category="Video" 
+                                    data-summary="" 
+                                    data-link="https://archive.org/embed/reincarnation-2005">
+                                    <td>Reincarnation</td>
+                                    <td>Takashi Shimizu</td>
+                                    <td>2005</td>
+                                    <td>Video</td>
+                                </tr>
+                                
+                                <tr class="library-item" 
+                                    data-title="The botanist&#39;s repository for new and rare plants: vol. 03 &amp; 04" 
+                                    data-author="Henry Cranke Andrews" 
+                                    data-year="1797" 
+                                    data-category="Books" 
+                                    data-summary="" 
+                                    data-link="https://gutenberg.org/cache/epub/72911/pg72911-images.html">
+                                    <td>The botanist&#39;s repository for new and rare plants: vol. 03 &amp; 04</td>
+                                    <td>Henry Cranke Andrews</td>
+                                    <td>1797</td>
+                                    <td>Books</td>
+                                </tr>
+                                
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+        <div class="item smallarge">
+            <div class="cards"><div class="cardsHeader">
+    <div class="cardsControls">
+            <div> <i class="fa-solid fa-arrows-up-down-left-right"></i></div>
+            <div> <i class="fa-solid fa-window-minimize"></i> <i class="fa-regular fa-window-restore"></i> <i class="fa-solid fa-xmark"></i></div>
+    </div>
+</div><div class="cardsBody">
+                    <h1>#Preview</h1>
+                    <div id="preview-container">
+                        <p>Select an item for preview.</p>
+                    </div>
+                    <div id="checkout-link"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const libraryItems = document.querySelectorAll(".library-item");
+    const previewContainer = document.getElementById("preview-container");
+    const checkoutLinkContainer = document.getElementById("checkout-link");
+
+      
+      libraryItems.forEach((item) => {
+        item.addEventListener("click", () => {
+            
+            libraryItems.forEach(i => i.classList.remove("selected"));
+            
+            item.classList.add("selected");
+
+             
+             const link = item.dataset.link;
+            const iframe = document.createElement("iframe");
+            iframe.src = link;
+            previewContainer.innerHTML = "";
+            previewContainer.appendChild(iframe);
+
+            
+            checkoutLinkContainer.innerHTML = `<a href="${link}" target="_blank">Check out</a>`;
+        });
+    });
+    
+    const titleSort = document.getElementById("title-sort");
+    const authorSort = document.getElementById("author-sort");
+    const yearSort = document.getElementById("year-sort");
+    const categorySort = document.getElementById("category-sort");
+
+    let sortOrder = {
+        title: "asc",
+        author: "asc",
+        year: "asc",
+        category: "asc"
+    };
+
+    
+    const formatAuthorName = (fullName) => {
+        const nameParts = fullName.split(" ");
+        const lastName = nameParts.pop(); 
+        const firstName = nameParts.join(" ");
+        return `${lastName}, ${firstName}`;
+    };
+
+    
+    libraryItems.forEach(item => {
+        const fullName = item.dataset.author;
+        const formattedName = formatAuthorName(fullName);
+        item.querySelector("td:nth-child(2)").textContent = formattedName; 
+    });
+
+    
+    const updateSortIndicators = (currentKey) => {
+        
+        [titleSort, authorSort, yearSort, categorySort].forEach(sortEl => {
+            sortEl.textContent = "↑";
+        });
+
+        
+        const indicator = sortOrder[currentKey] === "asc" ? "↑" : "↓";
+        switch (currentKey) {
+            case "title":
+                titleSort.textContent = indicator;
+                break;
+            case "author":
+                authorSort.textContent = indicator;
+                break;
+            case "year":
+                yearSort.textContent = indicator;
+                break;
+            case "category":
+                categorySort.textContent = indicator;
+                break;
+        }
+    };
+
+    
+    const sortTable = (key, sortOrderKey) => {
+    const rows = Array.from(libraryItems);
+
+    const sortedRows = rows.sort((a, b) => {
+        let aKey = a.dataset[key] || ""; 
+        let bKey = b.dataset[key] || ""; 
+
+        if (key === "year") {
+            
+            aKey = parseInt(aKey, 10) || 0; 
+            bKey = parseInt(bKey, 10) || 0; 
+            return sortOrder[sortOrderKey] === "asc" ? aKey - bKey : bKey - aKey;
+        }
+
+        if (key === "author") {
+            
+            aKey = formatAuthorName(a.dataset.author).toLowerCase();
+            bKey = formatAuthorName(b.dataset.author).toLowerCase();
+        }
+
+        
+        return sortOrder[sortOrderKey] === "asc"
+            ? aKey.localeCompare(bKey, undefined, { numeric: true })
+            : bKey.localeCompare(aKey, undefined, { numeric: true });
+    });
+
+    
+    const tbody = document.querySelector(".library-table tbody");
+    sortedRows.forEach(row => tbody.appendChild(row));
+
+    
+    sortOrder[sortOrderKey] = sortOrder[sortOrderKey] === "asc" ? "desc" : "asc";
+
+    
+    updateSortIndicators(sortOrderKey);
+};
+
+
+    
+    titleSort.addEventListener("click", () => sortTable("title", "title"));
+    authorSort.addEventListener("click", () => sortTable("author", "author"));
+    yearSort.addEventListener("click", () => sortTable("year", "year"));
+    categorySort.addEventListener("click", () => sortTable("category", "category"));
+
+    
+    libraryItems.forEach((item) => {
+        item.addEventListener("click", () => {
+            libraryItems.forEach(i => i.classList.remove("selected"));
+            item.classList.add("selected");
+
+            const link = item.dataset.link;
+            const iframe = document.createElement("iframe");
+            iframe.src = link;
+            previewContainer.innerHTML = "";
+            previewContainer.appendChild(iframe);
+
+            checkoutLinkContainer.innerHTML = `<h4><a href="${link}" target="_blank">Check out <i class='fa fa-long-arrow-right'></i></a></h4>`;
+        });
+    });
+});
+
+</script>
+  
+
+<footer id="footer">
+    <ul>
+        <li> <button id="footer-button">START</button> </li>
+        <li> <a href="#" id="btn-back-to-top" onclick="call()"><i class="fa-solid fa-circle-chevron-up"></i></a></li>
+        <li>
+            <div id="clock" class="clock" onload="showTime()"></div>
+        </li>
+    </ul>
+</footer>
+
+<div id="start-menu" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h1>START MENU</h1> <span class="close">&times;</span>
+        </div>
+        <div class="modal-body">
+
+            <div class="modal-bio">
+                <img class="modal-bio img" src="../images/icons/ke.jpg">
+                <p style="font-size:large; font-weight:bold;">NENRIKIDO</p>
+                <p align="center"><i class="fa-regular fa-map"></i> <a href="../sitemap/index.html">Sitemap</a></p>
+
+                <ul style="font-style: italic;">
+                    <li>OS: Nenrikido</li>
+                    <li>Version: 1.75</li>
+                    <li>Host: Neocities</li>
+                    <li>Processor: Hugo</li>
+                    <li>Since: 03-13-23</li>
+                </ul>
+            </div>
+            <div class="modal-list">  <a class="modal-menu " href="../index.html">  <span>Home </span> <i class="fa-solid fa-chevron-right"></i></a>  <a class="modal-menu " href="../about/index.html">  <span>About </span> <i class="fa-solid fa-chevron-right"></i></a>  <a class="modal-menu " href="../gallery/index.html">  <span>Gallery </span> <i class="fa-solid fa-chevron-right"></i></a>  <a class="modal-menu " href="../commissions/index.html">  <span>Commissions </span> <i class="fa-solid fa-chevron-right"></i></a>  <a class="modal-menu " href="../code/index.html">  <span>Code </span> <i class="fa-solid fa-chevron-right"></i></a>  <a class="modal-menu " href="../blog/index.html">  <span>Blog </span> <i class="fa-solid fa-chevron-right"></i></a>  <a class="modal-menu " href="../links/index.html">  <span>Links </span> <i class="fa-solid fa-chevron-right"></i></a>  <a class="modal-menu " href="../microblog/index.html">  <span>Microblog </span> <i class="fa-solid fa-chevron-right"></i></a>  <a class="modal-menu " href="index.html">  <span>Library </span> <i class="fa-solid fa-chevron-right"></i></a>  <a class="modal-menu " href="../nexus/index.html">  <span>Nexus </span> <i class="fa-solid fa-chevron-right"></i></a>  </div>
+
+        </div>
+        <div class="modal-footer"><div class="row centered">
+    <button id="pink" title="pink theme" class="theme-button" onclick="handleThemeButtonClick('pink', this)">💗</button>
+    <button id="blue" title="blue theme" class="theme-button" onclick="handleThemeButtonClick('blue', this)" >🫧</button> 
+    <button id="yellow" title="yellow theme" class="theme-button" onclick="handleThemeButtonClick('yellow', this)" >🪐</button> 
+    <button id="black" title="black theme" class="theme-button" onclick="handleThemeButtonClick('black', this)" >💤</button>
+    <button id="green" title="green theme" class="theme-button" onclick="handleThemeButtonClick('green', this)" >🌷</button>    
+</div></div>
+    </div>
+    <script>
+        function call() {
+            var body = $("html, body");
+            body.stop().animate({ scrollTop: 0 }, 500, 'swing', function () {
+            });
+        }</script>
+    <script type="text/javascript" src="../js/clock.js"></script>
+    <script defer type="text/javascript" src="../js/start.js"></script><script src="../js/theme.js" ></script>
+<script src="../../code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+<script src="../../cdn.jsdelivr.net/npm/muuri%400.9.5/dist/muuri.min.js"></script>
+<script defer src="../js/muuri-init.js"></script>
+<script src="../../cdn.jsdelivr.net/npm/%40twemoji/api%40latest/dist/twemoji.min.js" crossorigin="anonymous"></script>
+<script defer src="../js/lightbox.js" ></script>
+<script defer src="../js/yt_lite.js" ></script>
+<script defer src="../../unpkg.com/lunr%402.3.9/lunr.js"></script>
+<script defer src="../js/search.js" ></script>
+<script>
+  var loader = document.getElementById("preloader");
+  window.addEventListener("load", function () {
+    loader.style.display = "none";
+  });
+  var s = document.getElementById("preloader").style;
+  s.opacity = 1;
+  (function fade() {
+    (s.opacity -= 0.1) < 0 ? (s.display = "none") : setTimeout(fade, 40);
+  })();
+  </script>
+  <script>
+    twemoji.parse(document.body)
+  </script></body>
+
+
+<!-- Mirrored from nenrikido.neocities.org/library/ by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 26 May 2025 16:53:46 GMT -->
+</html>

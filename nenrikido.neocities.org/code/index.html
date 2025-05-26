@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    
+    <title>Code</title>
+    
+<!-- Mirrored from nenrikido.neocities.org/code/ by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 26 May 2025 16:52:06 GMT -->
+<meta charset="utf-8">
+    <meta name="description"
+        content="A special world." />
+    <meta name="dc.relation" content="../index.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel='icon' type='image/x-icon' href='../images/icons/pink-favicon.svg' /> 
+
+    <link rel="alternate" type="application/rss+xml" href="index.xml" title="NENRIKIDO" />
+    
+    <link href="../css/main.min.e82017acf1d47837e34aeae7160cbd8cee87ccf07777ebc9e2e85745f526f166.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="../../cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"> 
+    <script defer src="../../cloud.umami.is/script.js" data-website-id="fab6651d-7739-4c92-8ab8-01b6b670711b"></script>
+    
+    <div id="preloader"></div><body>
+    <div class="wrapper"> 
+    <nav id="navAlt">
+ <div class="navWrapper">  
+    <a class="navLink" href="#"><div id="code"> </div> CODE</a>
+    <p> <i class="fa-regular fa-circle-down"></i></p>
+    <p> <ul class="sort-btn">
+    <li class="sort00 active">Show all</li>
+    <li class="tumblr themes">Tumblr themes</li>
+<li class="page themes">Page themes</li>
+<li class="snippets">Snippets</li>
+ </ul> 
+ </p>
+</div>
+        <div id='musicplayer'>
+            <div id='musicpixel'> <img src="../images/pixels/music.gif" style="max-width: 40px;">
+                <div class='overlay'>
+                    <div class='playpause'><i class="fas fa-play"></i></div>
+                </div>
+            </div>
+            <div id='musictitle'> <span class='marquee'>wind chimes</span> </div>
+        </div> <audio id='musicsrc' loop src='https://dl.dropbox.com/scl/fi/207sozz1oxbnjuldcx9up/wind-chimes.mp3?rlkey=g80h8r4oygb24yl6r5ygayi9f&amp;dl=0'></audio>
+
+
+<script>
+    document.querySelector('.playpause').addEventListener('click', playpause);
+    
+    function playpause() {
+      if (document.querySelector('.playpause').innerHTML == '<i class="fas fa-play"></i>') {
+        document.querySelector('#musicsrc').play();
+        document.querySelector('.playpause').innerHTML = '<i class="fas fa-pause"></i>';
+      } else {
+        document.querySelector('#musicsrc').pause();
+        document.querySelector('.playpause').innerHTML = '<i class="fas fa-play"></i>';
+      }
+    }
+</script>
+<form class="search"> <input type="text" class="searchTerm" placeholder="Search..."> <button aria-label="submit" type="submit" class="searchButton"> <i class="fa fa-search"></i> </button> </form>
+
+<ul class="searchResults"></ul></nav>
+
+<div class="grid"> 
+ <div class="item smallarge ">
+    <div class="cards">
+        <div class="cardsHeader">
+    <div class="cardsControls">
+            <div> <i class="fa-solid fa-arrows-up-down-left-right"></i></div>
+            <div> <i class="fa-solid fa-window-minimize"></i> <i class="fa-regular fa-window-restore"></i> <i class="fa-solid fa-xmark"></i></div>
+    </div>
+</div>
+        <div class="cardsBody">
+            <h1>#Code Guide</h1>
+            <p> <p>This is a list of pre-made layouts and code snippets that are free for you to use. Check individual posts for details on how to use them. There&rsquo;s also a Github repository listing them <a href="https://github.com/js044/freebies/tree/main">here</a>. A few notes:</p>
+<ul>
+<li>All themes are licensed under the <a href="https://github.com/js044/freebies/blob/main/LICENSE">MIT License</a>, which means they&rsquo;re free for you to use however you want. The only stipulation is that you retain attribution to me, which can be as simple as leaving credit in the HTML/CSS comments (hidden from public view.)</li>
+<li>Page themes are platform agnostic layouts and can be used anywhere that supports (modern) HTML/CSS. They use CSS variables to manage user settings so you can swap out colors, images, fonts, etc. These variables are located in the :root element. If you&rsquo;d like to know more about CSS variables, you can read <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties">this guide</a>.</li>
+<li>Page themes are meant to look identical to previews out-of-the-box, so they come shipped with web URL images rather than local links. I encourage you to link your content locally.</li>
+<li>Page themes are stored in one messy file so you can easily drop it in and test it out, but this is <strong>not</strong> best practice. If you plan to use any themes across multiple pages, I strongly recommend separating the CSS and JS into their own files.</li>
+<li>Themes are tested on Mozilla and Chrome on a variety of displays, but there&rsquo;s no way I&rsquo;ll catch all bugs. If anything is weird, let me know.</li>
+<li>For instructions on installing a Tumblr theme, you can read their <a href="https://help.tumblr.com/hc/en-us/articles/230775027-Customizing-Your-Theme#h_01GWSSBWHMQT08V15J7ZJTMDJX">official documentation</a>.</li>
+</ul>
+<p>Feel free to email me (<a href="mailto:nenrikido@pm.me">nenrikido@pm.me</a>) with any questions/comments or leave a comment here.</p>
+<div id="HCB_comment_box"><a href="http://www.htmlcommentbox.com/">Comment Form</a> is loading comments...</div>
+<link rel="stylesheet" type="text/css" href="../../www.htmlcommentbox.com/static/skins/bootstrap/twitter-bootstrapa4f0.css?v=0" />
+<script type="text/javascript" id="hcb">   if(!window.hcb_user){hcb_user={};} (function(){var s=document.createElement("script"), l=hcb_user.PAGE || (""+window.location).replace(/'/g,"%27"), h="https://www.htmlcommentbox.com/";s.setAttribute("type","text/javascript");s.setAttribute("src", h+"/jread?page="+encodeURIComponent(l).replace("+","%2B")+"&mod=%241%24wq1rdBcg%24wVz3xOOc.ZF1mLS1sR.Mp0"+"&opts=16782&num=10&ts=1680596795074");if (typeof s!="undefined") document.getElementsByTagName("head")[0].appendChild(s);})(); </script>
+ </p>
+        </div>
+    </div>
+</div>
+<div class="item smallarge tumblr themes">
+    <div class="cards">
+        <div class="cardsHeader">
+    <div class="cardsControls">
+            <div> <i class="fa-solid fa-arrows-up-down-left-right"></i></div>
+            <div> <i class="fa-solid fa-window-minimize"></i> <i class="fa-regular fa-window-restore"></i> <i class="fa-solid fa-xmark"></i></div>
+    </div>
+</div>
+        <div class="cardsBody">
+            <h1></h1>
+            <p> <a href="../images/code/rb-1.gif" data-lightbox="rainbow-tumblr">
+<img src="../images/code/rb-1_hu1f891f1df5a5c3b1009f908747e8e1bf_6035749_0x420_resize_box_1.gif" class="img-fluid" loading="" alt="A Tumblr theme preview. It has a pastel rainbow background with a Creamy Mami character as the sidebar icon. The theme switches through different color themes based on the flag stripe that is selected.">
+</a>
+<a href="../images/code/rb-2.png" data-lightbox="rainbow-tumblr">
+<img src="../images/code/rb-2_hua6dbe4a9ce0e486f18616ea707d34b1a_1219768_0x420_resize_q75_h2_box_3.webp" class="img-fluid" loading="" alt="Alternate Tumblr theme preview.">
+</a>
+<div class="box-small">
+        <h5>Rainbow Tumblr Theme</h5>
+        <p> <p><a href="preview/rainbow2/index.html">live preview</a></p>
+<blockquote>
+<p>Finally converted the Rainbow Page Theme to a Tumblr theme. Happy pride!</p>
+</blockquote>
+<p>Features:</p>
+<ul>
+<li>500px posts</li>
+<li>Pride flag theme toggler</li>
+<li>Optional jukebox/badges boxes</li>
+<li>Custom audio player for posts</li>
+<li>Customizable title + title font size</li>
+<li>Support for additional pages</li>
+<li>User can add a link to any song for jukebox</li>
+<li>Optional link 4 + 5</li>
+<li>Optional background image or color</li>
+<li>Semi-transparent posts</li>
+<li>Custom permalink icon + favicon</li>
+</ul>
+ </p>
+        </div>
+<script src="../../gist.github.com/js044/cd47bf7889fbc42e02759832d243605b.js"></script>
+ </p>
+        </div>
+    </div>
+</div>
+<div class="item smallarge page themes">
+    <div class="cards">
+        <div class="cardsHeader">
+    <div class="cardsControls">
+            <div> <i class="fa-solid fa-arrows-up-down-left-right"></i></div>
+            <div> <i class="fa-solid fa-window-minimize"></i> <i class="fa-regular fa-window-restore"></i> <i class="fa-solid fa-xmark"></i></div>
+    </div>
+</div>
+        <div class="cardsBody">
+            <h1></h1>
+            <p> <div class="preview">
+    <a href="../images/code/rainbow.gif" data-lightbox="rainbow">
+<img src="../images/code/rainbow_hu43ab3c0f7b39c848b8623ebe9ed8e7f7_2946103_0x420_resize_box_1.gif" class="img-fluid" loading="" alt="A theme preview. A retro style background with boxes overlaid. There is an 8 striped flag in the corner. As the user clicks each stripe, the color scheme of the box shadows, border, and text changes to match.">
+</a>
+<a href="../images/code/ra-1.png" data-lightbox="rainbow">
+<img src="../images/code/ra-1_hu7d17cf3914a05a7acd6086e3b9fa84d0_1627594_0x420_resize_q75_h2_box_3.webp" class="img-fluid" loading="" alt="A mobile preview of the theme.">
+</a>
+</div>
+<div class="preview">
+    <a href="../images/code/ra-2.png" data-lightbox="rainbow">
+<img src="../images/code/ra-2_hu7ff060fdb23f6d35e51c7e934e005967_316236_0x420_resize_q75_h2_box_3.webp" class="img-fluid" loading="" alt="An alternate theme preview. This one has a sky background with a rainbow and an icon of Michiru Kaioh from Sailor Moon.">
+</a>
+<a href="../images/code/ra-3.png" data-lightbox="rainbow">
+<img src="../images/code/ra-3_hua028d6dd9bb4e32121c4cb6682ebd256_89227_0x420_resize_q75_h2_box_3.webp" class="img-fluid" loading="" alt="A zoomed-in preview of the sidebar boxes.">
+</a>
+</div>
+<div class="box-small">
+        <h5>Rainbow Page Theme</h5>
+        <p> <p><a href="preview/rainbow/index.html">live preview</a> / <a href="https://negg.tumblr.com/post/719689620334477312/rainbow-page-theme">tumblr post</a></p>
+<blockquote>
+<p>made a theme for pride month based on the original 70s rainbow flag! you can click on stripes of the flag to swap color schemes.</p>
+</blockquote>
+<p>features:</p>
+<ul>
+<li>customizable background &amp; sidebar images</li>
+<li>pride flag theme toggler (uses javascript)</li>
+<li>animated rainbow title</li>
+<li>lightly styled audio player</li>
+<li>responsive image class</li>
+<li>&hellip;and other cool stuff!</li>
+</ul>
+ </p>
+        </div>
+<script src="../../gist.github.com/js044/213429dbb42e8c852d6747c24c6097ac.js"></script>
+ </p>
+        </div>
+    </div>
+</div>
+<div class="item smallarge page themes">
+    <div class="cards">
+        <div class="cardsHeader">
+    <div class="cardsControls">
+            <div> <i class="fa-solid fa-arrows-up-down-left-right"></i></div>
+            <div> <i class="fa-solid fa-window-minimize"></i> <i class="fa-regular fa-window-restore"></i> <i class="fa-solid fa-xmark"></i></div>
+    </div>
+</div>
+        <div class="cardsBody">
+            <h1></h1>
+            <p> <div class="preview">
+    <a href="../images/code/sakura.gif" data-lightbox="sakura">
+<img src="../images/code/sakura_hu14b2343bcf4fd778c2465869a5430e65_3013479_0x420_resize_box_1.gif" class="img-fluid" loading="" alt="A theme preview. It&#39;s a gif of a standalone page. It has a header of Sakura from Cardcaptor Sakura and a background image of cherry blossoms over a river. Two pixels are to the right and left of the header image. The gif shows someone clicking on the left pixel, which opens a pop-up box with more text.">
+</a>
+<a href="../images/code/sa-1.png" data-lightbox="sakura">
+<img src="../images/code/sa-1_hue7e6965ec92c7c5cfa8eb951f55feada_733917_0x420_resize_q75_h2_box_3.webp" class="img-fluid" loading="" alt="A mobile preview of the theme. The pixels, rather than sitting besides the header image, rest beneath the main content.">
+</a>
+</div>
+<div class="preview">
+    <a href="../images/code/sa-2.png" data-lightbox="sakura">
+<img src="../images/code/sa-2_hu55dc116d50c3600fcab308cd701aa7b1_596960_0x420_resize_q75_h2_box_3.webp" class="img-fluid" loading="" alt="An alternate theme preview, with brighter pinks and blues. The theme uses a different gif of Sakura.">
+</a>
+<a href="../images/code/sa-3.png" data-lightbox="sakura">
+<img src="../images/code/sa-3_hu8910e3e717efc6086f35ef7f199f9412_566674_0x420_resize_q75_h2_box_3.webp" class="img-fluid" loading="" alt="A mobile preview of the theme.">
+</a>
+</div>
+<div class="box-small">
+        <h5>Sakura Page Theme</h5>
+        <p> <p><a href="preview/sakura/index.html">live preview</a> / <a href="https://negg.tumblr.com/post/717605261468123136/sakura-page-theme">tumblr post</a></p>
+<blockquote>
+<p>re-coded an unreleased page theme an anon asked me to release like 5 years ago (<a href="https://tomba2.tumblr.com/four">example</a> of the original). realized i actually hated a lot of how it was originally handled and now&hellip;it is ready to be unfurled!</p>
+</blockquote>
+<p>features:</p>
+<ul>
+<li>2 custom pixels that trigger pop-up boxes/modals</li>
+<li>customizable fonts, images, and colors</li>
+<li>title font supports english &amp; japanese</li>
+<li>header designed for 4:3 ratio gifs/images</li>
+<li>mobile responsive (built with flexbox)</li>
+</ul>
+ </p>
+        </div>
+<script src="../../gist.github.com/js044/7b74c883a7fc091f1eb68614b6ea6e28.js"></script>
+ </p>
+        </div>
+    </div>
+</div>
+<div class="item smallarge page themes">
+    <div class="cards">
+        <div class="cardsHeader">
+    <div class="cardsControls">
+            <div> <i class="fa-solid fa-arrows-up-down-left-right"></i></div>
+            <div> <i class="fa-solid fa-window-minimize"></i> <i class="fa-regular fa-window-restore"></i> <i class="fa-solid fa-xmark"></i></div>
+    </div>
+</div>
+        <div class="cardsBody">
+            <h1></h1>
+            <p> <div class="preview">
+    <a href="../images/code/su-1.png" data-lightbox="sunflower">
+<img src="../images/code/su-1_hub0235e47492da3647e06d3a17f9b755d_750610_0x420_resize_q75_h2_box_3.webp" class="img-fluid" loading="" alt="A theme preview. It&#39;s a profile page with a background image of sunflowers. A foggy box with text is in the center. A PNG of a girl is sitting next to the box.">
+</a>
+<a href="../images/code/su-2.png" data-lightbox="sunflower">
+<img src="../images/code/su-2_hufa3c180d90391a28cb34153810635462_254538_0x420_resize_q75_h2_box_3.webp" class="img-fluid" loading="" alt="A mobile preview of the theme.">
+</a>
+</div>
+<div class="preview">
+    <a href="../images/code/su-3.jpg" data-lightbox="sunflower">
+<img src="../images/code/su-3_hu0ef0376e30cc7b0a91032fa8c72cdfe9_368367_0x420_resize_q75_h2_box.webp" class="img-fluid" loading="" alt="A theme preview. It&#39;s a profile page with a background image of a city road. On the left, there are storefronts with flowers and the background shows a distant mountainous forest. A PNG of an anime-styled girl stands next to the foggy text box. She is holding a green bag behind her, smiling, and wearing cat ears.">
+</a>
+<a href="../images/code/su-4.png" data-lightbox="sunflower">
+<img src="../images/code/su-4_hu9bcb595ce350b1c697c8ca405035dbb8_605771_0x420_resize_q75_h2_box_3.webp" class="img-fluid" loading="" alt="A mobile preview of the theme.">
+</a>
+</div>
+<div class="box-small">
+        <h5>Sunflower Page Theme</h5>
+        <p> <p><a href="preview/sunflower/index.html">live preview</a> / <a href="https://negg.tumblr.com/post/716650921639198720/redesigned-recoded-the-sunflower-about-page">tumblr post</a></p>
+<blockquote>
+<p>completely re-coded and re-vamped a page theme from 2018 i made for tumblr. (original is <a href="https://negg.tumblr.com/post/712181004039766016/tomba2-sunflower-about-page">here</a>.) added a few features, made it behave on mobile, and it is now published for use anywhere.</p>
+</blockquote>
+<p>features:</p>
+<ul>
+<li>up to 2 side images (left &amp; right)</li>
+<li>customizable fonts, font sizes, images, and colors</li>
+<li>mobile responsive (built with flexbox)</li>
+<li>&hellip;and more!</li>
+</ul>
+ </p>
+        </div>
+<script src="../../gist.github.com/js044/e726caf2f2adc9374b14716e34527f37.js"></script>
+ </p>
+        </div>
+    </div>
+</div>
+<div class="item smallarge snippets">
+    <div class="cards">
+        <div class="cardsHeader">
+    <div class="cardsControls">
+            <div> <i class="fa-solid fa-arrows-up-down-left-right"></i></div>
+            <div> <i class="fa-solid fa-window-minimize"></i> <i class="fa-regular fa-window-restore"></i> <i class="fa-solid fa-xmark"></i></div>
+    </div>
+</div>
+        <div class="cardsBody">
+            <h1></h1>
+            <p> <a href="../images/code/preload.gif" data-lightbox="preloader">
+<img src="../images/code/preload_hu7573bf17b252c7d6850e57237b72aadb_396574_0x420_resize_box_1.gif" class="img-fluid" loading="" alt="A gif of a loading screen as the home page for Nenrikido loads.">
+</a>
+<div class="box-small">
+        <h5>Preloader</h5>
+        <p> <p><a href="../blog/post/making-a-preloader/index.html">blog post + codepen</a></p>
+<blockquote>
+<p>&ldquo;I recently decided it might improve user experience to get a loading screen instead of watching the grid unceremoniously disentangle itself. A few experiments later, and here we are.&rdquo;</p>
+</blockquote>
+ </p>
+        </div>
+<script src="../../gist.github.com/js044/a7c2e7c6ae4bd015366bf7a06e33ae23.js"></script>
+ </p>
+        </div>
+    </div>
+</div>
+<div class="item smallarge tumblr themes">
+    <div class="cards">
+        <div class="cardsHeader">
+    <div class="cardsControls">
+            <div> <i class="fa-solid fa-arrows-up-down-left-right"></i></div>
+            <div> <i class="fa-solid fa-window-minimize"></i> <i class="fa-regular fa-window-restore"></i> <i class="fa-solid fa-xmark"></i></div>
+    </div>
+</div>
+        <div class="cardsBody">
+            <h1></h1>
+            <p> <a href="../images/code/tt-1.jpg" data-lightbox="toothache">
+<img src="../images/code/tt-1_hu854bdf19b4ce90b98aef791122af3e11_235258_0x420_resize_q75_h2_box.webp" class="img-fluid" loading="" alt="A theme preview. It&#39;s pink and minimal.">
+</a>
+<a href="../images/code/tt-2.jpg" data-lightbox="toothache">
+<img src="../images/code/tt-2_hu5a3b62345c096726c405d491bdb95d67_156323_0x420_resize_q75_h2_box.webp" class="img-fluid" loading="" alt="A blue theme with a cat icon on the sidebar.">
+</a>
+<div class="box-small">
+        <h5>Toothache Theme</h5>
+        <p> <p><a href="preview/toothache/index.html">live preview</a> / <a href="https://negg.tumblr.com/post/711094972280160256/toothache-theme-by-negg-re-release-u-may-or-may">tumblr post</a></p>
+<blockquote>
+<p>this is a re-release of my very <a href="https://negg.tumblr.com/post/711094099488440320/negg-toothache-theme-by-negg-so-this-is-my">first theme</a> back in 2016&hellip;it&rsquo;s cleaned up &amp; a bit more comprehensible.</p>
+</blockquote>
+<p>features:</p>
+<ul>
+<li>400px posts</li>
+<li>2 links w/ a customizable link divider</li>
+<li>customizable post background color, permalink, favicon</li>
+<li>dropdown font selection &amp; customizable font size</li>
+<li>options for rounded/square sidebar image</li>
+<li>option to show/not show your description</li>
+</ul>
+ </p>
+        </div>
+<script src="../../gist.github.com/js044/1e97e4460014faddb27b71923f1e4f58.js"></script>
+ </p>
+        </div>
+    </div>
+</div>
+<div class="item smallarge tumblr themes">
+    <div class="cards">
+        <div class="cardsHeader">
+    <div class="cardsControls">
+            <div> <i class="fa-solid fa-arrows-up-down-left-right"></i></div>
+            <div> <i class="fa-solid fa-window-minimize"></i> <i class="fa-regular fa-window-restore"></i> <i class="fa-solid fa-xmark"></i></div>
+    </div>
+</div>
+        <div class="cardsBody">
+            <h1></h1>
+            <p> <a href="../images/code/pt-1.jpg" data-lightbox="pudding">
+<img src="../images/code/pt-1_hu4ae34acfb3d04073670e17b0bf655afe_140077_0x420_resize_q75_h2_box.webp" class="img-fluid" loading="" alt="A yellow Tumblr blog theme. It&#39;s minimal and serene with a photo of flowers and a sleeping girl.">
+</a>
+<a href="../images/code/pt-2.jpg" data-lightbox="pudding">
+<img src="../images/code/pt-2_hu2518b3e2d13666a94b4fab4e04d1b3a7_180586_0x420_resize_q75_h2_box.webp" class="img-fluid" loading="" alt="An alternate pink version of the theme that is left aligned rather than centered.">
+</a>
+<div class="box-small">
+        <h5>Pudding Theme</h5>
+        <p> <p><a href="preview/pudding/index.html">live preview</a> / <a href="https://negg.tumblr.com/post/710997721242353664/pudding-theme-plain-times-edit-by-negg-i-3-the">tumblr post</a></p>
+<blockquote>
+<p>i love the plain times theme and have made lots of customizations over the years. so i decided to finally tidy it up and release it as a formal edit.</p>
+</blockquote>
+<p>features:</p>
+<ul>
+<li>500px posts</li>
+<li>left or center aligned posts</li>
+<li>links for ask &amp; archive (if enabled)</li>
+<li>customizable fonts (dropdown selection)</li>
+<li>custom permalink icon or text</li>
+<li>optional title, header image, &amp; blockquote indentation</li>
+</ul>
+ </p>
+        </div>
+<script src="../../gist.github.com/js044/86994585030ab5dc76297c2bdb2286e4.js"></script>
+ </p>
+        </div>
+    </div>
+</div>
+
+</div>
+
+ 
+    </div><footer id="footer">
+    <ul>
+        <li> <button id="footer-button">START</button> </li>
+        <li> <a href="#" id="btn-back-to-top" onclick="call()"><i class="fa-solid fa-circle-chevron-up"></i></a></li>
+        <li>
+            <div id="clock" class="clock" onload="showTime()"></div>
+        </li>
+    </ul>
+</footer>
+
+<div id="start-menu" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h1>START MENU</h1> <span class="close">&times;</span>
+        </div>
+        <div class="modal-body">
+
+            <div class="modal-bio">
+                <img class="modal-bio img" src="../images/icons/ke.jpg">
+                <p style="font-size:large; font-weight:bold;">NENRIKIDO</p>
+                <p align="center"><i class="fa-regular fa-map"></i> <a href="../sitemap/index.html">Sitemap</a></p>
+
+                <ul style="font-style: italic;">
+                    <li>OS: Nenrikido</li>
+                    <li>Version: 1.75</li>
+                    <li>Host: Neocities</li>
+                    <li>Processor: Hugo</li>
+                    <li>Since: 03-13-23</li>
+                </ul>
+            </div>
+            <div class="modal-list">  <a class="modal-menu " href="../index.html">  <span>Home </span> <i class="fa-solid fa-chevron-right"></i></a>  <a class="modal-menu " href="../about/index.html">  <span>About </span> <i class="fa-solid fa-chevron-right"></i></a>  <a class="modal-menu " href="../gallery/index.html">  <span>Gallery </span> <i class="fa-solid fa-chevron-right"></i></a>  <a class="modal-menu " href="../commissions/index.html">  <span>Commissions </span> <i class="fa-solid fa-chevron-right"></i></a>  <a class="modal-menu " href="index.html">  <span>Code </span> <i class="fa-solid fa-chevron-right"></i></a>  <a class="modal-menu " href="../blog/index.html">  <span>Blog </span> <i class="fa-solid fa-chevron-right"></i></a>  <a class="modal-menu " href="../links/index.html">  <span>Links </span> <i class="fa-solid fa-chevron-right"></i></a>  <a class="modal-menu " href="../microblog/index.html">  <span>Microblog </span> <i class="fa-solid fa-chevron-right"></i></a>  <a class="modal-menu " href="../library/index.html">  <span>Library </span> <i class="fa-solid fa-chevron-right"></i></a>  <a class="modal-menu " href="../nexus/index.html">  <span>Nexus </span> <i class="fa-solid fa-chevron-right"></i></a>  </div>
+
+        </div>
+        <div class="modal-footer"><div class="row centered">
+    <button id="pink" title="pink theme" class="theme-button" onclick="handleThemeButtonClick('pink', this)">💗</button>
+    <button id="blue" title="blue theme" class="theme-button" onclick="handleThemeButtonClick('blue', this)" >🫧</button> 
+    <button id="yellow" title="yellow theme" class="theme-button" onclick="handleThemeButtonClick('yellow', this)" >🪐</button> 
+    <button id="black" title="black theme" class="theme-button" onclick="handleThemeButtonClick('black', this)" >💤</button>
+    <button id="green" title="green theme" class="theme-button" onclick="handleThemeButtonClick('green', this)" >🌷</button>    
+</div></div>
+    </div>
+    <script>
+        function call() {
+            var body = $("html, body");
+            body.stop().animate({ scrollTop: 0 }, 500, 'swing', function () {
+            });
+        }</script>
+    <script type="text/javascript" src="../js/clock.js"></script>
+    <script defer type="text/javascript" src="../js/start.js"></script><script src="../js/theme.js" ></script>
+<script src="../../code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+<script src="../../cdn.jsdelivr.net/npm/muuri%400.9.5/dist/muuri.min.js"></script>
+<script defer src="../js/muuri-init.js"></script>
+<script src="../../cdn.jsdelivr.net/npm/%40twemoji/api%40latest/dist/twemoji.min.js" crossorigin="anonymous"></script>
+<script defer src="../js/lightbox.js" ></script>
+<script defer src="../js/yt_lite.js" ></script>
+<script defer src="../../unpkg.com/lunr%402.3.9/lunr.js"></script>
+<script defer src="../js/search.js" ></script>
+<script>
+  var loader = document.getElementById("preloader");
+  window.addEventListener("load", function () {
+    loader.style.display = "none";
+  });
+  var s = document.getElementById("preloader").style;
+  s.opacity = 1;
+  (function fade() {
+    (s.opacity -= 0.1) < 0 ? (s.display = "none") : setTimeout(fade, 40);
+  })();
+  </script>
+  <script>
+    twemoji.parse(document.body)
+  </script></body>
+
+<!-- Mirrored from nenrikido.neocities.org/code/ by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 26 May 2025 16:52:51 GMT -->
+</html>
